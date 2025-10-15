@@ -12,15 +12,8 @@ depending on the proof a user provides."
 
 variable {F : Type*} [MyField F]
 
-Statement (x y z : F) (h : x = z) : x * y = x * z := by --ok take it from here charlie
-  Hint "You can either start using `{h}` or `{g}`."
-  Branch
-    rw [g]
-    Hint "You should use `{h}` now."
-    rw [h]
+Statement (x y z : F) (h : x = z) : x * y = z * y := by --ok take it from here charlie
   rw [h]
-  Hint "You should use `{g}` now."
-  rw [g]
 
 Conclusion "This last message appears if the level is solved."
 
