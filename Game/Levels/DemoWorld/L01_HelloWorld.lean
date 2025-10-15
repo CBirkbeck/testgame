@@ -1,4 +1,5 @@
 import Game.Metadata
+import Game.Levels.Definitions
 
 World "DemoWorld"
 Level 1
@@ -9,7 +10,9 @@ Introduction "This text is shown as first message when the level is played.
 You can insert hints in the proof below. They will appear in this side panel
 depending on the proof a user provides."
 
-Statement (x y : Nat) (h : x = 2) (g: y = 4) : x + x = y := by
+variable {F : Type*} [MyField F]
+
+Statement (x y z : F) (h : x = z) : x * y = x * z := by --ok take it from here charlie
   Hint "You can either start using `{h}` or `{g}`."
   Branch
     rw [g]
