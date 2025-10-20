@@ -12,8 +12,8 @@ Using these two axioms we want to expand upon add_zero to be in a more complete 
 
 variable {F : Type*} [MyField F]
 
-Statement (x: F): a+0=0+a:= by --ok take it from here charlie
-  rw [MyField.add_zero a, MyField.add_comm a 0, MyField.add_zero 0]
+Statement (x y z : F) (h : x = z) : x * y = z * y := by --ok take it from here charlie
+  rw [h]
 
 
 Conclusion "This last message appears if the level is solved."
