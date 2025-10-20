@@ -1,8 +1,6 @@
 import Mathlib
 
-NewTactic rw rfl
-TacticDoc rw "The `rw` tactic replaces terms using known equalities (lemmas)."
-TacticDoc rfl "The `rfl` tactic closes goals that are definitionally equal by reflexivity."
+
 class MyField (F : Type*) extends Add F, Mul F, Zero F, One F where
   add_zero : ∀ a :  F, a + 0 = a
   add_inv : ∀ a : F , ∃ b : F,  a + b = 0 ∧ b + a = 0
