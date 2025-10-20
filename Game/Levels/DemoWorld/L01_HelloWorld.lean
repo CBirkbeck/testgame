@@ -1,6 +1,6 @@
 import Game.Metadata
 import Game.Levels.Definitions
-
+TacticDoc rw
 World "DemoWorld"
 Level 1
 
