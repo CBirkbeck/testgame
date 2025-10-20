@@ -17,8 +17,5 @@ Statement (x : F) : x + 0 = 0 + x := by
 
 Conclusion "This last message appears if the level is solved."
 
-/- Use these commands to add items to the game's inventory. -/
-NewTactic rw rfl
 
-TacticDoc rw
 
