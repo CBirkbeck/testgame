@@ -1,6 +1,6 @@
 import Game.Metadata
 import Game.Levels.Definitions
-TacticDoc rw
+
 World "DemoWorld"
 Level 1
 
@@ -13,11 +13,11 @@ Using these two axioms we want to expand upon add_zero to be in a more complete 
 variable {F : Type*} [MyField F]
 
 Statement (x: F): x + 0 = 0 + x := by --ok take it from here charlie
-  rw [MyField.add_zero x, MyField.add_comm x 0, MyField.add_zero 0]
+  rw [MyField.add_zero x, MyField.add_comm x 0, MyField.add_zero 0] 
 
 
 Conclusion "This last message appears if the level is solved."
-
+TacticDoc rw
 /- Use these commands to add items to the game's inventory. -/
 
 NewTactic rw rfl
