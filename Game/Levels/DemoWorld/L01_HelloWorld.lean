@@ -6,14 +6,13 @@ Level 1
 
 Title "Hello World"
 
-Introduction "This text is shown as first message when the level is played.
-You can insert hints in the proof below. They will appear in this side panel
-depending on the proof a user provides."
+Introduction "In this level we are going to begin looking at one of our axioms, the add_zero axiom: ∀ a ∈ F ∃ 0 ∈ F s.t 0+a=a. 
+We want to extend it to ∀ a ∈ F ∃ a ∈ F s.t a+0=a=0+a  " 
 
 variable {F : Type*} [MyField F]
 
-Statement (x y z : F) (h : x = z) : x * y = z * y := by --ok take it from here charlie
-  rw [h]
+Statement (a : F) : a+0 =0+a := by --ok take it from here charlie
+  
 
 Conclusion "This last message appears if the level is solved."
 
