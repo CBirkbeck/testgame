@@ -12,7 +12,7 @@ We want to extend it to ∀ a ∈ F ∃ a ∈ F s.t a+0=a=0+a  "
 variable {F : Type*} [MyField F]
 
 Statement (a : F) : a+0 =0+a := by --ok take it from here charlie
-  
+  rw [MyField.add_zero a, MyField.add_comm a 0, MyField.add_zero 0]
 
 Conclusion "This last message appears if the level is solved."
 
