@@ -6,7 +6,8 @@ Level 1
 
 Title "Hello World"
 
-Introduction "In this level we are going to begin looking at one of our axioms, the add_zero axiom: ∀ a ∈ F ∃ 0 ∈ F s.t 0+a=a. We want to extend it to ∀ a ∈ F ∃ a ∈ F s.t a+0=a=0+a" 
+Introduction """In this level we are going to begin looking at one of our axioms, the add_zero axiom: ∀ a ∈ F ∃ 0 ∈ F s.t 0+a=a. We want to extend it to 
+∀ a ∈ F ∃ a ∈ F s.t a+0=a=0+a"""
 
 variable {F : Type*} [MyField F]
 
