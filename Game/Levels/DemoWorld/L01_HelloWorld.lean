@@ -1,6 +1,7 @@
 import Game.Metadata
 import Game.Levels.Definitions
 
+
 World "DemoWorld"
 Level 1
 
@@ -21,3 +22,4 @@ Conclusion "This last message appears if the level is solved."
 
 -- NewTheorem Nat.add_comm Nat.add_assoc
 -- NewDefinition Nat Add Eq
+NewTheorem MyField.add_zero MyField.add_comm
