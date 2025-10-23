@@ -33,9 +33,9 @@ Theorem stating that multiplyig 1 on the right leaves an element unchanged:
 TheoremDoc MyField.mul_one as "mul_one" in "Multiplication"
 
 /--
-Theorem stating that multiplying by 1 on the right leaves an element unchanged:
-`a * 1 = a`.
+Theorem stating that multiplying on the right side is the same as the left side:
+`a * b = b * a`.
 -/
-TheoremDoc MyField.mul_one as "mul_one" in "Multiplication"
+TheoremDoc MyField.mul_one as "mul_comm" in "Multiplication"
 
-NewTheorem MyField.zero_add MyField.mul_one MyField.zero_add
+NewTheorem MyField.zero_add MyField.mul_one MyField.mul_comm
