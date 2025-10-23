@@ -36,6 +36,6 @@ TheoremDoc MyField.mul_one as "mul_one" in "Multiplication"
 Theorem stating that multiplying on the right side is the same as the left side:
 `a * b = b * a`.
 -/
-TheoremDoc MyField.mul_one as "mul_comm" in "Multiplication"
+TheoremDoc MyField.mul_comm as "mul_comm" in "Multiplication"
 
 NewTheorem MyField.zero_add MyField.mul_one MyField.mul_comm
