@@ -14,6 +14,8 @@ is that ater this level we will not only be able to say that a+0=a, but that 0+a
 
 variable {F : Type*} [MyField F]
 
+open MyField
+
 Statement (x : F): x + 0 = 0 + x := by
   rw [MyField.add_comm x 0]   -- rewrites goal to x + 0 = x
 
