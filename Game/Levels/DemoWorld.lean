@@ -1,5 +1,6 @@
 import Game.Levels.DemoWorld.L01_HelloWorld
 import Game.Levels.DemoWorld.L02_HelloWorld
+import Game.Levels.DemoWorld.L03_HelloWorld
 World "DemoWorld"
 Title "Demo World"
 
