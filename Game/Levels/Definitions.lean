@@ -18,6 +18,6 @@ namespace MyField
 lemma test (a b : F) : a + b = b + a := by
   exact add_comm a b
 
-lemma zero_add (a : F) : 0 + a = a := by
+lemma zero_add2 (a : F) : 0 + a = a := by
   rw [test 0 a]
   apply add_zero

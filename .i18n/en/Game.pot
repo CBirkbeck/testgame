@@ -1,36 +1,24 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-23\n"
+"POT-Creation-Date: 2025-11-11\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that multiplying by 1 on the right leaves an element unchanged:\n"
-"`a * 1 = a`."
-msgstr ""
-
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Hello World"
 msgstr ""
 
 #: Game
 msgid "This text appears on the starting page where one selects the world/level to play.\n"
 "You can use **markdown**."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Theorem stating that addition is commutative:\n"
-"`a + b = b + a`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Congrtatulations, you are becoming quite good at using our theormes!\n"
-"You have once again unlocked a new theorem that you shall see available\n"
-"in the next level."
 msgstr ""
 
 #: GameServer.RpcHandlers
@@ -58,48 +46,18 @@ msgid "Here you can put additional information about the game. It is accessible\
 "Use **markdown**."
 msgstr ""
 
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "This last message appears if the level is solved."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "This text is shown as first message when the level is played.\n"
+"You can insert hints in the proof below. They will appear in this side panel\n"
+"depending on the proof a user provides."
+msgstr ""
+
 #: Game.Levels.DemoWorld
-msgid "To begin exploring Fields, we must start with what they are! A field is a set\n"
-"F together with two binary operations,+: F ⨯ F → F and ∘: F ⨯ F → F such that our Field axioms hold.\n"
-"To begin with, we will simply state our axioms, but throughout this world we will explore them more,\n"
-"so do not worry if they apear daunting.\n"
-"Informaly, we can view Fields as a set which we can perform adition and multiplication on, with\n"
-"inverses. But this will be formaly defined too!"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that adding zero on the left leaves an element unchanged:\n"
-"`0 + a = a `."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Theorem stating that adding zero on the right leaves an element unchanged:\n"
-"`a + 0 = a`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "We are now going to look at the usage of two more of our exams to expand them\n"
-",mul_one: ∀ a : F , a * 1 = a and mul_comm: ∀ a b : F, a * b = b * a\n"
-"Using these two axioms we want to expand upon mul_one so that we can state 1*a=a , not just a*1=a."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Congrtatulations! You have completed your first level\n"
-"and can now use the theorem zero_add, you shall see it in theorems on the\n"
-"next level."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that multiplyig 1 on the right leaves an element unchanged:\n"
-"`a * 1 = a`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Exploring the identity and communativity"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Exploring multiplicative inverse and commutatvity"
+msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
 msgstr ""
 
 #: Game.Levels.DemoWorld
@@ -108,11 +66,4 @@ msgstr ""
 
 #: Game
 msgid "Game Template"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "We are going to begin by looking at the usage of two of our exams to expand them\n"
-"! The two axioms are add_zero: ∀ a :  F, a + 0 = a and add_comm : ∀ a b :  F , a + b = b + a.\n"
-"Using these two axioms we want to expand upon add_zero to be in a more complete. What i mean by this\n"
-"is that ater this level we will not only be able to say that a+0=a, but that 0+a =a."
 msgstr ""

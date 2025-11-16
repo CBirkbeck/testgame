@@ -1,5 +1,6 @@
 import Game.Metadata
 import Game.Levels.Definitions
+import Game.Levels.DemoWorld.L01_HelloWorld
 
 
 World "DemoWorld"
@@ -13,10 +14,10 @@ Using these two axioms we want to expand upon mul_one so that we can state 1*a=a
 
 variable {F : Type*} [MyField F]
 
-Statement (x : F): x*1 = 1*x := by
+Statement (x : F): x * 1 = 1 * x := by
   rw [MyField.mul_comm]
 
-Conclusion "Congrtatulations, you are becoming quite good at using our theormes!
+Conclusion "Congratulations, you are becoming quite good at using our theormes!
 You have once again unlocked a new theorem that you shall see available
 in the next level."
 
