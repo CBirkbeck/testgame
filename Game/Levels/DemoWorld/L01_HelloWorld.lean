@@ -16,7 +16,7 @@ variable {F : Type*} [MyField F]
 
 open MyField
 
-open MyField
+
 
 /--
 Theorem stating that adding zero on the left leaves an element unchanged:

@@ -13,19 +13,21 @@ Introduction "We are now going to look at the usage of two more of our exams to 
 Using these two axioms we want to expand upon mul_one so that we can state 1*a=a , not just a*1=a."
 
 variable {F : Type*} [MyField F]
+/--
+Theorem stating that multiplyig 1 on the left leaves an element unchanged:
+`1 * a = a`.
+-/
 
-Statement (x : F): x * 1 = 1 * x := by
+TheoremDoc MyField.one_mul as "one_mul" in "Multiplication"
+
+Statement MyField.one_mul (x : F): x * 1 = 1 * x := by
   rw [MyField.mul_comm]
 
 Conclusion "Congratulations, you are becoming quite good at using our theormes!
 You have once again unlocked a new theorem that you shall see available
 in the next level."
 
-/--
-Theorem stating that adding zero on the left leaves an element unchanged:
-`0 + a = a `.
--/
-TheoremDoc MyField.zero_add as "zero_add" in "Addition"
+
 /--
 Theorem stating that multiplyig 1 on the right leaves an element unchanged:
 `a * 1 = a`.
