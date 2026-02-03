@@ -21,6 +21,7 @@ Theorem stating that multiplyig 1 on the left leaves an element unchanged:
 TheoremDoc MyField.one_mul as "one_mul" in "Multiplication"
 
 Statement MyField.one_mul (x : F): x * 1 = 1 * x := by
+
   rw [MyField.mul_comm]
 
 Conclusion "Congratulations, you are becoming quite good at using our theormes!

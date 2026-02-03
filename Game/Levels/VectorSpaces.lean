@@ -1,9 +1,6 @@
-import Game.Levels.DemoWorld.L01_HelloWorld
-import Game.Levels.DemoWorld.L02_HelloWorld
-import Game.Levels.DemoWorld.L03_HelloWorld
-import Game.Levels.DemoWorld.L04_HelloWorld
-World "DemoWorld"
-Title "Demo World"
+import Game.Levels.VectorSpaces.L01_VectorSpaces
+World "VectorSpaces"
+Title "Vector Spaces"
 
 Introduction "
 To begin exploring Fields, we must start with what they are! A field is a set

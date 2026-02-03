@@ -24,8 +24,9 @@ Theorem stating that adding zero on the left leaves an element unchanged:
 -/
 TheoremDoc MyField.zero_add as "zero_add" in "Addition"
 
-Statement MyField.zero_add (x : F): x + 0 = 0 + x := by
-  rw [add_comm x 0]   -- rewrites goal to x + 0 = x
+Statement MyField.zero_add (x : F):  0 + x = x  := by
+  rw [add_comm 0 x]   -- rewrites goal to x + 0 = x
+  rw [MyField.add_zero]
 
 Conclusion "Congratulations! You have completed your first level
 and can now use the theorem zero_add, you shall see it in theorems on the

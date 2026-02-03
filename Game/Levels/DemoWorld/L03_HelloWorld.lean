@@ -1,6 +1,7 @@
 import Game.Metadata
 import Game.Levels.Definitions
-
+import Game.Levels.DemoWorld.L01_HelloWorld
+import Game.Levels.DemoWorld.L02_HelloWorld
 
 World "DemoWorld"
 Level 3
@@ -19,10 +20,16 @@ To prove our statement
 "
 variable {F : Type*} [MyField F]
 
-Statement (x y: F): x*(0+y) = (0+y)*x := by
+Statement (x y: F): x*(0+y) = (y+0)*x := by
   rw [MyField.zero_add]
-  rw [MyField.mul_comm x y]
+  rw [MyField.add_zero]
+  rw [MyField.mul_comm]
+
+
+
+
+
+
 
 Conclusion "Congrtatulations, you are becoming quite good at using our theormes!
-You have once again unlocked a new theorem that you shall see available
-in the next level."
+"
