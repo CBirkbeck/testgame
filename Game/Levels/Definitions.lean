@@ -29,3 +29,18 @@ class MyVectorSpace (F V : Type*)
   add_smul : ∀ (α μ : F) (v : V), (α + μ) • v = (α • v) + (μ • v)
   smul_add : ∀ (α : F) (v w : V), α • (v + w) = (α • v) + (α • w)
   one_smul : ∀ v : V, (1 : F) • v = v
+
+
+
+variable {F V : Type*} [MyField F] [MyVectorSpace F V]
+
+structure MySubspace (F V : Type*)
+  [MyField F] [MyVectorSpace F V] where
+  carrier  : Set V
+  zero_mem : 0 ∈ carrier
+  add_mem  : ∀ {u v : V}, u ∈ carrier → v ∈ carrier → (u + v) ∈ carrier
+  smul_mem : ∀ {α : F} {v : V}, v ∈ carrier → (α • v) ∈ carrier
+
+
+instance : Membership V (MySubspace F V) where
+  mem S v := v ∈ S.carrier

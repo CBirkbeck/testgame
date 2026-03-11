@@ -1,6 +1,5 @@
 import Game.Metadata
 import Game.Levels.Definitions
-import Game.Levels.DemoWorld.L01_HelloWorld
 import Game.Levels.DemoWorld.L02_HelloWorld
 
 World "DemoWorld"

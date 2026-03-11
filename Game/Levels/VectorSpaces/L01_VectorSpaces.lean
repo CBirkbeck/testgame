@@ -20,3 +20,7 @@ Statement MyVectorSpace.add_perm4
   rw [MyVectorSpace.add_asoc (v_2 + v_1) v_3 v_4]
   rw [MyVectorSpace.add_comm v_3 v_4]
   rw [← MyVectorSpace.add_asoc (v_2 + v_1) v_4 v_3]
+
+/- Use these commands to add items to the game's inventory. -/
+
+NewTheorem MyVectorSpace.add_perm4
