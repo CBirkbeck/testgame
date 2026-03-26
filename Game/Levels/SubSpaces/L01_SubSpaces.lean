@@ -13,7 +13,7 @@ right with respect to vector addition and scalar multiplication inherited from V
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 variable (W : MySubspace F V)
 
-Statement : W.carrier 0 := by
+Statement : 0 ∈ W := by
   exact W.zero_mem
 
 Conclusion "Congrtatulations, you have shown one of the important properties of a vector subspace!"

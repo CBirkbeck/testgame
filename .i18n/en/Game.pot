@@ -1,36 +1,135 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-11\n"
+"POT-Creation-Date: 2026-03-26\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: GameServer.RpcHandlers
-msgid "level completed with warnings… 🎭"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
-msgstr ""
-
 #: Game
 msgid "This text appears on the starting page where one selects the world/level to play.\n"
 "You can use **markdown**."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "Closed under multiplication"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Theorem stating that addition is commutative:\n"
+"`a + b = b + a`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Congratulations, you are becoming quite good at using our theormes!\n"
+"You have once again unlocked a new theorem that you shall see available\n"
+"in the next level."
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "level completed! 🎉"
 msgstr ""
 
-#: Game
-msgid "Hello World Game"
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "Congrtatulations, you are becoming quite good at using our theormes!"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "This is the first time we have seen proposed asumptions in this game so you did very well to dedal with them!"
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "solution of a+x=b"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "In this level we are showing that vector subspaces are closed under adition. This may seemintuitive but it is vital to understand that we are dealing with subsets now and not just sets with axioms."
+msgstr ""
+
+#: Game.Levels.DemoWorld
+#: Game.levels.VectorSpaces
+msgid "To begin exploring Fields, we must start with what they are! A field is a set\n"
+"F together with two binary operations,+: F ⨯ F → F and ∘: F ⨯ F → F such that our Field axioms hold.\n"
+"To begin with, we will simply state our axioms, but throughout this world we will explore them more,\n"
+"so do not worry if they apear daunting.\n"
+"Informaly, we can view Fields as a set which we can perform adition and multiplication on, with\n"
+"inverses. But this will be formaly defined too!"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "Similiarly to the last level we are showing an integral property of subspaces, the property that they are closed under multiplication"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Theorem stating that adding zero on the left leaves an element unchanged:\n"
+"`0 + a = a `."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "Congrtatulations, you have shown one of the important properties of a vector subspace!"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "We are now going to look at the usage of two more of our exams to expand them\n"
+",mul_one: ∀ a : F , a * 1 = a and mul_comm: ∀ a b : F, a * b = b * a\n"
+"Using these two axioms we want to expand upon mul_one so that we can state 1*a=a , not just a*1=a."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Congrtatulations, that was a tricky one, but the method you learned will be used in later levels! you have now proved the first part of our proposition and the final level of this world will be proving the second condition."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Exploring the identity and communativity"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "We will now be looking at the Subspace test: u,v ∈ W , λ ∈ F  u+λv ∈ W. So what we are making sure is is that this is closed under scalar adition and multiplication just like before!"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "We are now going to look at using what we have learned about fields to show one of their aplied properties.\n"
+"-/\n"
+"/-\n"
+"We will be looking at proving that if a,b ∈ F then a+x=b has a solution of the form x = ainv + b (HINT start by writing 'rcases MyField.add_inv a with ⟨ainv, ha_right, ha_left⟩' )"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "Theorem stating that addition of vectors is commutative up to reordering\n"
+"of four terms:\n"
+"`v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`."
+msgstr ""
+
+#: Game.Levels.DemoWorld
+msgid "Demo World"
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed with warnings… 🎭"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "well done, I hope at this point you are getting to grips with the style of LEAN we will be using. You are doing very well!"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplying on the right side is the same as the left side:\n"
+"`a * b = b * a`."
+msgstr ""
+
+#: Game
+msgid "Hello World Game"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L02_VectorSpaces
+msgid "Theorem stating that scalar multiplication distributes over the sum of four vectors:\n"
+"`α • (v₁ + v₂ + v₃ + v₄) = α•v₁ + α•v₂ + α•v₃ + α•v₄`."
 msgstr ""
 
 #: Game
@@ -46,24 +145,88 @@ msgid "Here you can put additional information about the game. It is accessible\
 "Use **markdown**."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This last message appears if the level is solved."
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "Use one of our subspace axioms on hu and hv, hu and hv are simply asumptions we propose"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplyig 1 on the left leaves an element unchanged:\n"
+"`1 * a = a`."
 msgstr ""
 
 #: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+msgid "Theorem stating that adding zero on the right leaves an element unchanged:\n"
+"`a + 0 = a`."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "combing multiplication and addition"
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplyig 1 on the right leaves an element unchanged:\n"
+"`a * 1 = a`."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "Closed under adition"
+msgstr ""
+
+#: Game.levels.VectorSpaces
+msgid "Vector Spaces"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "This level may take some thinking, but you can apply our axioms in a chain i.e our add axiom on our scalar mult axiom"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Exploring multiplicative inverse and commutatvity"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "We are going to begin by looking at the properties of a subspace. Suppose that V is a vector space over a field F and that W is a subset\n"
+"of V . We say that W is a (vector) subspace of V if it is a vector space in its own\n"
+"right with respect to vector addition and scalar multiplication inherited from V. Thus we will begin by looking at the importance of containing the zero vector."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "We are going to begin by looking at the usage of two of our exams to expand them\n"
+"! The two axioms are add_zero: `∀ a :  F, a + 0 = a` and add_comm : ∀ a b :  F , a + b = b + a.\n"
+"Using these two axioms we want to expand upon add_zero to be in a more complete. What i mean by this\n"
+"is that ater this level we will not only be able to say that a + 0 = a, but that 0+a =a."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "Subspace test"
 msgstr ""
 
 #: Game
 msgid "Game Template"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "Exploring Subspaces"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Congratulations! You have completed your first level\n"
+"and can now use the theorem zero_add, you shall see it in theorems on the\n"
+"next level."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "We are now going to look at combining what we have used so far to prove a slightly more\n"
+"complex statement\n"
+"-/\n"
+"/-\n"
+"We will be looking at combining the fact that\n"
+"` ∀ a b : F, a * b = b * a`\n"
+"and\n"
+"` ∀ a :  F, a + 0 = a`\n"
+"To prove our statement"
+msgstr ""
+
+#: Game.levels.SubSpaces
+msgid "Sub Spaces"
 msgstr ""

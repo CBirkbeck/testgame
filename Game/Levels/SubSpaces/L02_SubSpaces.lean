@@ -11,7 +11,7 @@ Introduction "In this level we are showing that vector subspaces are closed unde
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 variable (W : MySubspace F V)
 
-Statement (W : MySubspace F V) (u v : V) (hu : W.carrier u) (hv : W.carrier v) :W.carrier (u + v) := by
+Statement (W : MySubspace F V) (u v : V) (hu : u ∈ W) (hv : v ∈ W) : (u + v ∈ W) := by
   Hint "Use one of our subspace axioms on hu and hv, hu and hv are simply asumptions we propose"
   exact W.add_mem hu hv
 

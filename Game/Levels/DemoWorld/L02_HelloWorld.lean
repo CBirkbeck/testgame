@@ -20,9 +20,10 @@ Theorem stating that multiplyig 1 on the left leaves an element unchanged:
 
 TheoremDoc MyField.one_mul as "one_mul" in "Multiplication"
 
-Statement MyField.one_mul (x : F): x * 1 = 1 * x := by
+Statement MyField.one_mul (x : F): 1 * x = x := by
 
   rw [MyField.mul_comm]
+  rw [MyField.mul_one]
 
 Conclusion "Congratulations, you are becoming quite good at using our theormes!
 You have once again unlocked a new theorem that you shall see available
