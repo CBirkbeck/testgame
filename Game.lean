@@ -1,5 +1,6 @@
 import Game.Levels.DemoWorld
-
+import game.levels.VectorSpaces
+import game.levels.SubSpaces
 -- Here's what we'll put on the title screen
 Title "Hello World Game"
 Introduction

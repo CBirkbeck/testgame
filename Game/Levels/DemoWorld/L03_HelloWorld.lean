@@ -20,9 +20,10 @@ To prove our statement
 variable {F : Type*} [MyField F]
 
 Statement (x y: F): x*(0+y) = (y+0)*x := by
-  rw [MyField.zero_add]
-  rw [MyField.add_zero]
-  rw [MyField.mul_comm]
+  rw [MyField.mul_comm x (0+y)]
+  rw [MyField.add_comm 0 y]
+
+
 
 
 
