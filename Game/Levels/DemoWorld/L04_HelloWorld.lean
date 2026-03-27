@@ -11,6 +11,10 @@ Introduction "We are now going to look at using what we have learned about field
 applied properties. We will be proving that if a, b ∈ F then a + x = b has a solution of the form
 x = ainv + b. HINT: start by writing `rcases MyField.add_inv a with ⟨ainv, ha_right, ha_left⟩`"
 
+TacticDoc rcases "The `rcases` tactic destructs hypotheses, for example existential statements into their components."
+TacticDoc refine "The `refine` tactic works like `exact` but allows leaving holes marked with `?_`."
+TacticDoc intro "The `intro` tactic introduces hypotheses into context from a goal beginning with `∀` or `→`."
+
 NewTactic rcases refine intro
 
 /--

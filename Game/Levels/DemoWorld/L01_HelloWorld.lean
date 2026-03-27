@@ -6,10 +6,19 @@ Level 1
 
 Title "Exploring the identity and commutativity"
 
+
+
+World "DemoWorld"
+Level 1
+
+Title "Exploring the identity and commutativity"
+
 Introduction "We are going to begin by looking at the usage of two of our axioms to expand them!
 The two axioms are add_zero: `∀ a : F, a + 0 = a` and add_comm : `∀ a b : F, a + b = b + a`.
 Using these two axioms we want to expand upon add_zero to be more complete. What I mean by this
 is that after this level we will not only be able to say that a + 0 = a, but that 0 + a = a."
+
+TacticDoc rw "The `rw` tactic rewrites the goal using a given theorem or hypothesis."
 
 NewTactic rw
 

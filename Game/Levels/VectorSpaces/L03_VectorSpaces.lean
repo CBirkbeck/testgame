@@ -5,7 +5,14 @@ import Game.Levels.VectorSpaces.L02_VectorSpaces
 World "VectorSpaces"
 Level 3
 
+Title "Combining permutation and scalar distribution"
+
+Introduction "In this level we combine the two theorems from the previous levels to
+prove a result about scalar multiplication over a permuted sum of four vectors."
+
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
-Statement (v_1 v_2 v_3 v_4 : V) (α : F) : α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4+ α • v_3 := by
-  rw[MyVectorSpace.add_perm4 v_1 v_2 v_3 v_4]
-  rw[MyVectorSpace.smul_add4 v_2 v_1 v_4 v_3]
+
+Statement (v_1 v_2 v_3 v_4 : V) (α : F) :
+    α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4 + α • v_3 := by
+  rw [MyVectorSpace.add_perm4 v_1 v_2 v_3 v_4]
+  rw [MyVectorSpace.smul_add4 v_2 v_1 v_4 v_3]

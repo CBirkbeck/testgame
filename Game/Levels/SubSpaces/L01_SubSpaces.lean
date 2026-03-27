@@ -11,6 +11,9 @@ vector space over a field F and that W is a subset of V. We say that W is a (vec
 if it is a vector space in its own right with respect to vector addition and scalar multiplication
 inherited from V. Thus we will begin by looking at the importance of containing the zero vector."
 
+TacticDoc exact "The `exact` tactic closes a goal by providing a direct proof term."
+TacticDoc constructor "The `constructor` tactic splits a conjunction goal `P ∧ Q` into two subgoals."
+
 NewTactic exact constructor
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
