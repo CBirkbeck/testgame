@@ -5,6 +5,11 @@ import Game.Levels.VectorSpaces.L02_VectorSpaces
 World "VectorSpaces"
 Level 4
 
+Title "Cancellation law for vector addition"
+
+Introduction "In this level we prove that if u + v = v then u must be the zero vector.
+This is the cancellation law, and uses the existence of additive inverses."
+
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
 Statement (u v : V) (α : F) : u + v = v → u = 0 := by
