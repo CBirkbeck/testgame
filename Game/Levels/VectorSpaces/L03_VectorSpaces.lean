@@ -7,8 +7,7 @@ Level 3
 
 Title "Combining permutation and scalar distribution"
 
-Introduction "In this level we combine the two theorems from the previous levels to
-prove a result about scalar multiplication over a permuted sum of four vectors."
+Introduction "In this level we combine the two theorems from the previous levels to prove a result about scalar multiplication over a permuted sum of four vectors."
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 

@@ -7,8 +7,7 @@ Level 2
 
 Title "Scalar multiplication over four vectors"
 
-Introduction "Now we will use our smul_add axiom to distribute scalar multiplication
-over a sum of four vectors."
+Introduction "Now we will use our smul_add axiom to distribute scalar multiplication over a sum of four vectors."
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
