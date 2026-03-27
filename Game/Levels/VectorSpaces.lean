@@ -4,6 +4,7 @@ import Game.Levels.VectorSpaces.L03_VectorSpaces
 import Game.Levels.VectorSpaces.L04_VectorSpaces
 World "VectorSpaces"
 Title "Vector Spaces"
+Prerequisites "DemoWorld"
 
 Introduction "
 To begin exploring Fields, we must start with what they are! A field is a set

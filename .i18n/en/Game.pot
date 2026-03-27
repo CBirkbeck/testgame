@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-26\n"
+"POT-Creation-Date: 2026-03-27\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -53,7 +53,7 @@ msgid "In this level we are showing that vector subspaces are closed under aditi
 msgstr ""
 
 #: Game.Levels.DemoWorld
-#: Game.levels.VectorSpaces
+#: Game.Levels.VectorSpaces
 msgid "To begin exploring Fields, we must start with what they are! A field is a set\n"
 "F together with two binary operations,+: F ⨯ F → F and ∘: F ⨯ F → F such that our Field axioms hold.\n"
 "To begin with, we will simply state our axioms, but throughout this world we will explore them more,\n"
@@ -136,15 +136,6 @@ msgstr ""
 msgid "You should use this game as a template for your own game and add your own levels."
 msgstr ""
 
-#: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
-"Use **markdown**."
-msgstr ""
-
 #: Game.Levels.SubSpaces.L02_SubSpaces
 msgid "Use one of our subspace axioms on hu and hv, hu and hv are simply asumptions we propose"
 msgstr ""
@@ -157,6 +148,11 @@ msgstr ""
 #: Game.Levels.DemoWorld.L01_HelloWorld
 msgid "Theorem stating that adding zero on the right leaves an element unchanged:\n"
 "`a + 0 = a`."
+msgstr ""
+
+#: Game
+msgid "Here you can put additional information about the game.\n"
+"Use **markdown**."
 msgstr ""
 
 #: Game.Levels.DemoWorld.L03_HelloWorld
@@ -172,7 +168,7 @@ msgstr ""
 msgid "Closed under adition"
 msgstr ""
 
-#: Game.levels.VectorSpaces
+#: Game.Levels.VectorSpaces
 msgid "Vector Spaces"
 msgstr ""
 
