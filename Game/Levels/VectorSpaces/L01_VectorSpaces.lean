@@ -14,28 +14,31 @@ variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 Vector addition has a right identity: `v + 0 = v`.
 -/
 TheoremDoc MyVectorSpace.add_zero as "vec_add_zero" in "VectorSpace"
+NewTheorem MyVectorSpace.add_zero
 
 /--
 Vector addition is commutative: `u + v = v + u`.
 -/
 TheoremDoc MyVectorSpace.add_comm as "vec_add_comm" in "VectorSpace"
+NewTheorem MyVectorSpace.add_comm
 
 /--
 Every vector has an additive inverse: `∀ v, ∃ w, v + w = 0 ∧ w + v = 0`.
 -/
 TheoremDoc MyVectorSpace.add_inv as "vec_add_inv" in "VectorSpace"
+NewTheorem MyVectorSpace.add_inv
 
 /--
 Vector addition is associative: `(u + v) + w = u + (v + w)`.
 -/
 TheoremDoc MyVectorSpace.add_asoc as "vec_add_asoc" in "VectorSpace"
+NewTheorem MyVectorSpace.add_asoc
 
 /--
 Scalar multiplication distributes over vector addition: `α • (v + w) = α • v + α • w`.
 -/
 TheoremDoc MyVectorSpace.smul_add as "vec_smul_add" in "VectorSpace"
-
-NewTheorem MyVectorSpace.add_zero MyVectorSpace.add_comm MyVectorSpace.add_inv MyVectorSpace.add_asoc MyVectorSpace.smul_add
+NewTheorem MyVectorSpace.smul_add
 
 /--
 Vectors can be permuted in a sum of four: `v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`.
