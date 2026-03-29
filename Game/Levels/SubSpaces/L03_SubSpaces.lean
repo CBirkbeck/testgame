@@ -1,18 +1,18 @@
 import Game.Metadata
 import Game.Levels.Definitions
-import Game.Levels.VectorSpaces.L02_VectorSpaces
+import Game.Levels.SubSpaces.L02_SubSpaces
 
-World "VectorSpaces"
+World "SubSpaces"
 Level 3
 
-Title "Combining permutation and scalar distribution"
+Title "Closed under scalar multiplication"
 
-Introduction "In this level we combine the two theorems from the previous levels to
-prove a result about scalar multiplication over a permuted sum of four vectors."
+Introduction "Similarly to the last level we are showing an integral property of subspaces: that they are closed under scalar multiplication."
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
-Statement (v_1 v_2 v_3 v_4 : V) (α : F) :
-    α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4 + α • v_3 := by
-  rw [MyVectorSpace.add_perm4 v_1 v_2 v_3 v_4]
-  rw [MyVectorSpace.smul_add4 v_2 v_1 v_4 v_3]
+Statement (W : MySubspace F V) (α : F) (v : V) (hv : v ∈ W) :
+    α • v ∈ W := by
+  exact W.smul_mem hv
+
+Conclusion "Well done! I hope at this point you are getting to grips with the style of Lean we will be using. You are doing very well!"
