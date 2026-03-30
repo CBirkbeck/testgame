@@ -21,13 +21,13 @@ NewTactic rcases refine intro
 Every element of a field has an additive inverse:
 `∀ a : F, ∃ b : F, a + b = 0 ∧ b + a = 0`.
 -/
-TheoremDoc MyField.add_inv as "add_inv" in "Addition"
+TheoremDoc MyField.add_inv as "add_inv" in "Fields"
 
 /--
 Addition in a field is associative:
 `(a + b) + c = a + (b + c)`.
 -/
-TheoremDoc MyField.add_asoc as "add_asoc" in "Addition"
+TheoremDoc MyField.add_asoc as "add_asoc" in "Fields"
 
 variable {F : Type*} [MyField F]
 

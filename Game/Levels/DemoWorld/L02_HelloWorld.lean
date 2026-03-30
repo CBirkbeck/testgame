@@ -17,19 +17,19 @@ variable {F : Type*} [MyField F]
 Theorem stating that multiplying 1 on the right leaves an element unchanged:
 `a * 1 = a`.
 -/
-TheoremDoc MyField.mul_one as "mul_one" in "Multiplication"
+TheoremDoc MyField.mul_one as "mul_one" in "Fields"
 
 /--
 Theorem stating that multiplication is commutative:
 `a * b = b * a`.
 -/
-TheoremDoc MyField.mul_comm as "mul_comm" in "Multiplication"
+TheoremDoc MyField.mul_comm as "mul_comm" in "Fields"
 
 /--
 Theorem stating that multiplying 1 on the left leaves an element unchanged:
 `1 * a = a`.
 -/
-TheoremDoc MyField.one_mul as "one_mul" in "Multiplication"
+TheoremDoc MyField.one_mul as "one_mul" in "Fields"
 
 Statement MyField.one_mul (x : F) : 1 * x = x := by
   rw [MyField.mul_comm]

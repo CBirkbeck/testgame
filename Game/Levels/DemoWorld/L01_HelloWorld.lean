@@ -24,19 +24,19 @@ open MyField
 Theorem stating that adding zero on the right leaves an element unchanged:
 `a + 0 = a`.
 -/
-TheoremDoc MyField.add_zero as "add_zero" in "Addition"
+TheoremDoc MyField.add_zero as "add_zero" in "Fields"
 
 /--
 Theorem stating that addition is commutative:
 `a + b = b + a`.
 -/
-TheoremDoc MyField.add_comm as "add_comm" in "Addition"
+TheoremDoc MyField.add_comm as "add_comm" in "Fields"
 
 /--
 Theorem stating that adding zero on the left leaves an element unchanged:
 `0 + a = a`.
 -/
-TheoremDoc MyField.zero_add as "zero_add" in "Addition"
+TheoremDoc MyField.zero_add as "zero_add" in "Fields"
 
 Statement MyField.zero_add (x : F) : 0 + x = x := by
   rw [add_comm 0 x]
