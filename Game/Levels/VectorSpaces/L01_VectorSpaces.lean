@@ -46,6 +46,7 @@ TheoremDoc MyVectorSpace.smul_add as "V.smul_add" in "VectorSpace"
 /--
 `MyVectorSpace.add_perm4`: Vectors can be permuted in a sum of four: `v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`.
 -/
+TheoremDoc MyVectorSpace.add_perm4 as "V.add_perm4" in "VectorSpace"
 
 
 Statement MyVectorSpace.add_perm4 (v_1 v_2 v_3 v_4 : V) :
