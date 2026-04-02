@@ -7,11 +7,20 @@ Level 5
 
 Title "Intersection of two subspaces i"
 
-Introduction "We will now be looking at showing that if V is a vector space, and U and W are subspaces of V, then U ∩ W is a subspace of V. To start let us show that it contains the 0 element. Think about what it means to intersect two sets."
+Introduction "We will now show that the intersection of two subspaces is a subspace.
+
+Recall: x ∈ U ∩ W means both x ∈ U and x ∈ W.
+To show 0 ∈ U ∩ W we must show 0 ∈ U and 0 ∈ W simultaneously.
+
+In Lean this is the conjunction:  0 ∈ U ∧ 0 ∈ W
+
+Use constructor to split into two subgoals.
+Both U and W are subspaces, so both contain 0."
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
 Statement (U : MySubspace F V) (W : MySubspace F V) : 0 ∈ U ∧ 0 ∈ W := by
+Hint "Use constructor to split the goal, then close each part with the appropriate zero_mem."
   constructor
   exact U.zero_mem
   exact W.zero_mem
