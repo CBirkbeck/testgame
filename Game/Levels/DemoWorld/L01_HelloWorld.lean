@@ -6,10 +6,20 @@ Level 1
 
 Title "Exploring the identity and commutativity"
 
-Introduction "We are going to begin by looking at the usage of two of our axioms to expand them!
-The two axioms are add_zero: `∀ a : F, a + 0 = a` and add_comm : `∀ a b : F, a + b = b + a`.
-Using these two axioms we want to expand upon add_zero to be more complete. What I mean by this
-is that after this level we will not only be able to say that a + 0 = a, but that 0 + a = a."
+Introduction "We are going to begin by looking at two of our axioms.
+The axiom add_zero states:   ∀ a : F, a + 0 = a
+The axiom add_comm states:   ∀ a b : F, a + b = b + a
+
+Our field definition only gives the right-hand additive identity (a + 0 = a),
+but Axiom A2 in the course notes requires both sides: 0 + a = a = a + 0.
+In this level we derive the left-hand version 0 + x = x from these two axioms.
+
+The only tactic you need is rw (rewrite).
+rw [thm] finds the left-hand side of thm in the goal and replaces it with the right-hand side.
+
+Step 1: rw [add_comm 0 x]   — rewrites 0 + x  to  x + 0.
+Step 2: rw [MyField.add_zero]   — rewrites x + 0  to  x, closing the goal."
+
 
 /-- The `rw` tactic rewrites the goal using a given theorem or hypothesis. -/
 TacticDoc rw
@@ -42,7 +52,9 @@ Statement MyField.zero_add (x : F) : 0 + x = x := by
   rw [add_comm 0 x]
   rw [MyField.add_zero]
 
-Conclusion "Congratulations! You have completed your first level
-and can now use the theorem zero_add, you shall see it in theorems on the next level."
+Conclusion "Congratulations! You have proved zero_add — the left-hand additive identity.
+You derived it from the right-hand identity and commutativity, with no extra axiom needed.
+The theorem zero_add is now unlocked and available in all future levels."
+
 
 NewTheorem MyField.add_zero MyField.add_comm MyField.zero_add
