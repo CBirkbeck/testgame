@@ -27,7 +27,6 @@ Statement (v_1 v_2 v_3 v_4 : V) (α : F) :
     α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4 + α • v_3 := by
 
   Hint "You have already proved add_perm4 and smul_add4. Apply them in order."
-
   rw [MyVectorSpace.add_perm4 v_1 v_2 v_3 v_4]
   rw [MyVectorSpace.smul_add4 v_2 v_1 v_4 v_3]
 Conclusion "A two-line proof of a non-trivial statement!

@@ -33,7 +33,7 @@ Statement MyVectorSpace.smul_add4 (v_1 v_2 v_3 v_4 : V) (α : F) :
   rw [MyVectorSpace.add_asoc (α • v_1 + α • v_2) (α • v_3) (α • v_4)]
 
 NewTheorem MyVectorSpace.smul_add4
-Conclusion field
+
 Conclusion "Excellent! You have proved smul_add4.
 In Level 3 you will see how having smul_add4 as a named theorem makes the next proof
 just two lines — this is the payoff of building up a library of lemmas.
