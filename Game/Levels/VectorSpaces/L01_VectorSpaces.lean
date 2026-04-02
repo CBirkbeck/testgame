@@ -6,7 +6,15 @@ Level 1
 
 Title "Permuting four vectors"
 
-Introduction "In this level we explore how commutativity and associativity of vector addition let us reorder sums of vectors."
+Introduction "In this level we explore commutativity and associativity of vector addition.
+
+Recall Remark 2 after Definition 1.5: using VS4 and VS5 we can reorder any sum.
+Here we prove:  v_1 + v_2 + v_3 + v_4 = v_2 + v_1 + v_4 + v_3
+
+IMPORTANT: when Lean writes v_1 + v_2 + v_3 + v_4 it means ((v_1 + v_2) + v_3) + v_4.
+The brackets are invisible but matter when applying rw.
+Hover over a + symbol in the interface to reveal the hidden bracket structure."
+
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
@@ -38,15 +46,19 @@ TheoremDoc MyVectorSpace.smul_add as "V.smul_add" in "VectorSpace"
 /--
 `MyVectorSpace.add_perm4`: Vectors can be permuted in a sum of four: `v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`.
 -/
-TheoremDoc MyVectorSpace.add_perm4 as "V.add_perm4" in "VectorSpace"
+
 
 Statement MyVectorSpace.add_perm4 (v_1 v_2 v_3 v_4 : V) :
     v_1 + v_2 + v_3 + v_4 = v_2 + v_1 + v_4 + v_3 := by
+  Hint "Start with rw [MyVectorSpace.add_comm v_1 v_2], then use add_asoc to separate v_3 and v_4."
   rw [MyVectorSpace.add_comm v_1 v_2]
   rw [MyVectorSpace.add_asoc (v_2 + v_1) v_3 v_4]
   rw [MyVectorSpace.add_comm v_3 v_4]
   rw [← MyVectorSpace.add_asoc (v_2 + v_1) v_4 v_3]
 
-Conclusion "Well done! You have unlocked the vector space axioms and can now use them in future levels."
+Conclusion "Well done! You have proved add_perm4.
+This theorem is now unlocked and will be used directly in Level 3.
+The key lesson: even simple reorderings require careful bracket management in Lean.
+Level 2 introduces the other main axiom — distributivity of scalar multiplication."
 
 NewTheorem MyVectorSpace.add_zero MyVectorSpace.add_comm MyVectorSpace.add_inv MyVectorSpace.add_asoc MyVectorSpace.smul_add MyVectorSpace.add_perm4

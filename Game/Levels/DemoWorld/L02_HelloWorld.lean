@@ -15,9 +15,7 @@ The axiom mul_comm states:   ∀ a b : F, a * b = b * a
 
 Your goal is to prove 1 * x = x.
 The proof has exactly the same two-step structure as Level 1
-
-Notice: the additive and multiplicative structures of a field are both abelian groups,
-so the same proof pattern works for both."
+"
 
 
 variable {F : Type*} [MyField F]
