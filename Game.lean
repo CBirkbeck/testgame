@@ -2,20 +2,22 @@ import Game.Levels.DemoWorld
 import Game.Levels.VectorSpaces
 import Game.Levels.SubSpaces
 
+Title "Linear Algebra LEAN Game"
 
-Title "Hello World Game"
-Introduction "
-This text appears on the starting page where one selects the world/level to play.
-You can use **markdown**.
-"
+Introduction "Welcome to the Linear Algebra LEAN Game!
+This game is based on the second-year UEA module Complex Functions and Linear Algebra,
+supervised by Christopher Birkbeck.
 
-Info "
-Here you can put additional information about the game.
-Use **markdown**.
-"
+There are three worlds to complete, each building on the last.
+Complete them in order — each world unlocks the next."
+
+Info "Created by Charlie Yates as part of dissertation MTHA7029Y
+at the University of East Anglia.
+The mathematics covers fields (Definition 1.1), vector spaces (Definition 1.5),
+and subspaces (Definition 1.7, Theorem 1.9)."
 
 Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
+CaptionShort "Linear Algebra LEAN Game"
+CaptionLong "A Lean 4 game teaching fields, vector spaces and subspaces from the UEA second-year linear algebra module."
 
 MakeGame
