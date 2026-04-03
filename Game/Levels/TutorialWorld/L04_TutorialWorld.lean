@@ -32,8 +32,8 @@ Steps:
   2. exact W.zero_mem       — every subspace contains 0; closes the first subgoal
   3. exact W.add_mem hu hv  — closure under addition; closes the second subgoal
 
-The subspace axioms W.zero_mem and W.add_mem are previewed here so you can see them
-in action — they will be studied in full detail in Subspaces World."
+The subspace axioms W.zero_mem and W.add_mem are viewable here so you can see them
+in action — We will see them more later in the subspace world!."
 
 /-- The `constructor` tactic splits a conjunction goal `P ∧ Q`
 into two separate subgoals. Prove them in order:
@@ -49,7 +49,7 @@ variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
 Statement (W : MySubspace F V) (u v : V) (hu : u ∈ W) (hv : v ∈ W) :
     (0 ∈ W) ∧ (u + v ∈ W) := by
-  Hint "The goal is a conjunction. Use constructor to split it into two parts."
+  Hint "The goal is a conjunction as has and between it. Use constructor to split it into two parts."
   constructor
   Hint "First subgoal: 0 ∈ W. Every subspace contains 0. Try: exact W.zero_mem"
   exact W.zero_mem

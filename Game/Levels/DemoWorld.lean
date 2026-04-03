@@ -4,6 +4,7 @@ import Game.Levels.DemoWorld.L03_HelloWorld
 import Game.Levels.DemoWorld.L04_HelloWorld
 
 World "DemoWorld"
+Dependency TutorialWorld
 Title "Demo World"
 
 Introduction "

@@ -58,10 +58,6 @@ Here is what happened step by step:
   2. rw [MyField.add_zero] replaced  a + 0  with  a
   3. The goal became  a = a, which Lean closes by reflexivity.
 
-The rw tactic is your most versatile tool. It can be used multiple times in a row:
-  rw [lemma1]
-  rw [lemma2]
-or chained together: rw [lemma1, lemma2].
-You will use it throughout Field World and Vector Spaces World."
+The rw tactic is your most versatile tool and will be crucial for the rest of the game."
 
 NewTheorem MyField.add_zero

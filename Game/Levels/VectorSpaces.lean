@@ -4,6 +4,7 @@ import Game.Levels.VectorSpaces.L03_VectorSpaces
 import Game.Levels.VectorSpaces.L04_VectorSpaces
 
 World "VectorSpaces"
+Dependency DemoWorld
 Title "Vector Spaces"
 
 

@@ -9,8 +9,6 @@ Title "Chaining Rewrites"
 
 Introduction "Well done on completing Level 1!
 
-You know that rw replaces a subexpression in the goal using an equation.
-In this level you will need to apply rw twice in a row, using two field axioms.
 
 Recall the associativity axiom:
   add_asoc : ∀ a b c : F,  (a + b) + c = a + (b + c)
@@ -22,11 +20,6 @@ This matches the left-hand side of add_asoc exactly.
 A single rw [MyField.add_asoc] rewrites it to  a + (b + c) = a + (b + c),
 which Lean closes automatically.
 
-Now try a two-step proof. Your goal is actually:
-  (a + b) + c = a + (b + c)
-
-Step 1: rw [MyField.add_asoc]   — left side becomes a + (b + c)
-The goal is now closed.
 
 In later levels you will chain several rw steps to rearrange longer expressions.
 Each rw changes the goal and you can watch it update in the info panel on the right."

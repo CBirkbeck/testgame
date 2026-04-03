@@ -6,6 +6,7 @@ import Game.Levels.SubSpaces.L05_SubSpaces
 import Game.Levels.SubSpaces.L06_SubSpaces
 
 World "SubSpaces"
+Dependency VectorSpaces
 Title "Sub Spaces"
 
 

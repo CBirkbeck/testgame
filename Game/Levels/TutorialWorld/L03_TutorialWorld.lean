@@ -45,11 +45,9 @@ Statement (W : MySubspace F V) (u v : V) (hu : u ∈ W) (hv : v ∈ W) : v ∈ W
 Try: exact hv"
   exact hv
 
-Conclusion "Perfect! exact is the simplest way to close a goal: just name the proof you already have.
+Conclusion "Perfect! Here you have learnt how powerful exact can be.
 
 You will use exact constantly throughout the game:
-  exact hv              when a hypothesis matches the goal directly
-  exact W.zero_mem      when a structure field matches the goal
-  exact W.add_mem hu hv when a theorem applied to arguments matches the goal
+
 
 The next level shows how to combine exact with the third tactic: constructor."
