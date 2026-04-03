@@ -24,3 +24,7 @@ Statement (U : MySubspace F V) (W : MySubspace F V) : 0 ∈ U ∧ 0 ∈ W := by
   constructor
   exact U.zero_mem
   exact W.zero_mem
+
+Conclusion "Great! You have shown that 0 ∈ U ∩ W — the intersection is non-empty.
+This is the first step in proving U ∩ W is a subspace.
+Level 6 completes the proof by verifying closure under the Subspace Test condition."

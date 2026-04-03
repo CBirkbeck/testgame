@@ -1,7 +1,7 @@
 import Game.Levels.DemoWorld
 import Game.Levels.VectorSpaces
 import Game.Levels.SubSpaces
-
+import Game.levels.LinearCombinations
 Title "Linear Algebra LEAN Game"
 
 Introduction "Welcome to the Linear Algebra LEAN Game!

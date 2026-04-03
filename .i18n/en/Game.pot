@@ -1,20 +1,18 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.22.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-27\n"
+"POT-Creation-Date: 2026-04-03\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit"
 
-#: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use **markdown**."
-msgstr ""
-
-#: Game.Levels.SubSpaces.L03_SubSpaces
-msgid "Closed under multiplication"
+#: Game.Levels.VectorSpaces.L04_VectorSpaces
+msgid "Superb! You have proved Theorem 1.6(i) — the cancellation law for vectors.\n"
+"You used intro, rcases, and multiple backward rewrites to encode a standard\n"
+"mathematical proof step by step in Lean.\n"
+"You are now ready for Subspaces World."
 msgstr ""
 
 #: Game.Levels.DemoWorld.L01_HelloWorld
@@ -22,127 +20,248 @@ msgid "Theorem stating that addition is commutative:\n"
 "`a + b = b + a`."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Congratulations, you are becoming quite good at using our theormes!\n"
-"You have once again unlocked a new theorem that you shall see available\n"
-"in the next level."
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Then: refine ⟨ainv + b, ?_⟩"
 msgstr ""
 
-#: GameServer.RpcHandlers
-msgid "level completed! 🎉"
+#: Game.Levels.VectorSpaces.L03_VectorSpaces
+msgid "You have already proved add_perm4 and smul_add4. Apply them in order."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L03_HelloWorld
-msgid "Congrtatulations, you are becoming quite good at using our theormes!"
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "`MySubspace.add_mem`: Every subspace is closed under vector addition.\n"
+"If `u ∈ W` and `v ∈ W` then `u + v ∈ W`."
 msgstr ""
 
-#: Game.Levels.SubSpaces.L02_SubSpaces
-msgid "This is the first time we have seen proposed asumptions in this game so you did very well to dedal with them!"
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "The `intro` tactic introduces hypotheses into context from a goal beginning with `∀` or `→`."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "Permuting four vectors"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L04_VectorSpaces
+msgid "Cancellation law for vector addition"
 msgstr ""
 
 #: GameServer.RpcHandlers
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L04_HelloWorld
-msgid "solution of a+x=b"
-msgstr ""
-
-#: Game.Levels.SubSpaces.L02_SubSpaces
-msgid "In this level we are showing that vector subspaces are closed under adition. This may seemintuitive but it is vital to understand that we are dealing with subsets now and not just sets with axioms."
-msgstr ""
-
-#: Game.Levels.DemoWorld
-#: Game.Levels.VectorSpaces
-msgid "To begin exploring Fields, we must start with what they are! A field is a set\n"
-"F together with two binary operations,+: F ⨯ F → F and ∘: F ⨯ F → F such that our Field axioms hold.\n"
-"To begin with, we will simply state our axioms, but throughout this world we will explore them more,\n"
-"so do not worry if they apear daunting.\n"
-"Informaly, we can view Fields as a set which we can perform adition and multiplication on, with\n"
-"inverses. But this will be formaly defined too!"
-msgstr ""
-
-#: Game.Levels.SubSpaces.L03_SubSpaces
-msgid "Similiarly to the last level we are showing an integral property of subspaces, the property that they are closed under multiplication"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Theorem stating that adding zero on the left leaves an element unchanged:\n"
-"`0 + a = a `."
-msgstr ""
-
-#: Game.Levels.SubSpaces.L01_SubSpaces
-msgid "Congrtatulations, you have shown one of the important properties of a vector subspace!"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "We are now going to look at the usage of two more of our exams to expand them\n"
-",mul_one: ∀ a : F , a * 1 = a and mul_comm: ∀ a b : F, a * b = b * a\n"
-"Using these two axioms we want to expand upon mul_one so that we can state 1*a=a , not just a*1=a."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L04_HelloWorld
-msgid "Congrtatulations, that was a tricky one, but the method you learned will be used in later levels! you have now proved the first part of our proposition and the final level of this world will be proving the second condition."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Exploring the identity and communativity"
-msgstr ""
-
-#: Game.Levels.SubSpaces.L04_SubSpaces
-msgid "We will now be looking at the Subspace test: u,v ∈ W , λ ∈ F  u+λv ∈ W. So what we are making sure is is that this is closed under scalar adition and multiplication just like before!"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L04_HelloWorld
-msgid "We are now going to look at using what we have learned about fields to show one of their aplied properties.\n"
-"-/\n"
-"/-\n"
-"We will be looking at proving that if a,b ∈ F then a+x=b has a solution of the form x = ainv + b (HINT start by writing 'rcases MyField.add_inv a with ⟨ainv, ha_right, ha_left⟩' )"
+#: Game.Levels.VectorSpaces.L03_VectorSpaces
+msgid "In this level we combine the two theorems from the previous levels.\n"
+"\n"
+"Your goal is:\n"
+"  α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4 + α • v_3\n"
+"\n"
+"On paper: first reorder the vectors using commutativity, then distribute the scalar.\n"
+"In Lean, because we already proved add_perm4 and smul_add4, the proof is two lines:\n"
+"\n"
+"Your goal is:\n"
+"  α • (v_1 + v_2 + v_3 + v_4) = α • v_2 + α • v_1 + α • v_4 + α • v_3\n"
+"\n"
+"On paper: first reorder the vectors using commutativity, then distribute the scalar.\n"
+"In Lean, because we already proved add_perm4 and smul_add4, the proof is two lines:"
 msgstr ""
 
 #: Game.Levels.VectorSpaces.L01_VectorSpaces
-msgid "Theorem stating that addition of vectors is commutative up to reordering\n"
-"of four terms:\n"
-"`v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`."
+msgid "`MyVectorSpace.add_zero`: Vector addition has a right identity: `v + 0 = v`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "The proof is identical in structure to Level 1. Try rw [MyField.mul_comm] first."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L02_VectorSpaces
+msgid "Scalar multiplication over four vectors"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "Well done! You have now proved all three Subspace Test conditions individually:\n"
+"  Level 1: 0 ∈ W                       (W.zero_mem)\n"
+"  Level 2: u, v ∈ W ⟹ u + v ∈ W      (W.add_mem)\n"
+"  Level 3: v ∈ W ⟹ α • v ∈ W         (W.smul_mem)\n"
+"\n"
+"Level 4 combines all three in a single proof using the constructor tactic."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "`MyVectorSpace.add_perm4`: Vectors can be permuted in a sum of four: `v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "`MyVectorSpace.add_comm`: Vector addition is commutative: `u + v = v + u`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "Apply mul_comm first to swap the factors of multiplication, then add_comm to reorder the sum."
+msgstr ""
+
+#: Game
+msgid "Welcome to the Linear Algebra LEAN Game!\n"
+"This game is based on the second-year UEA module Complex Functions and Linear Algebra,\n"
+"supervised by Christopher Birkbeck.\n"
+"\n"
+"There are three worlds to complete, each building on the last.\n"
+"Complete them in order — each world unlocks the next."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "This level may take some thinking. Use constructor to split the ∧ goal into two parts."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L05_SubSpaces
+msgid "We will now show that the intersection of two subspaces is a subspace.\n"
+"\n"
+"Recall: x ∈ U ∩ W means both x ∈ U and x ∈ W.\n"
+"To show 0 ∈ U ∩ W we must show 0 ∈ U and 0 ∈ W simultaneously.\n"
+"\n"
+"In Lean this is the conjunction:  0 ∈ U ∧ 0 ∈ W\n"
+"\n"
+"Use constructor to split into two subgoals.\n"
+"Both U and W are subspaces, so both contain 0."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "In this level we show that a subspace is closed under addition.\n"
+"\n"
+"Closure under addition means: if u ∈ W and v ∈ W, then u + v ∈ W.\n"
+"This is not automatic for arbitrary subsets — it must be verified.\n"
+"\n"
+"This level introduces something new: named hypotheses inside the statement.\n"
+"  hu : u ∈ W   means hu is a proof that u ∈ W\n"
+"  hv : v ∈ W   means hv is a proof that v ∈ W\n"
+"\n"
+"Think of W.add_mem as a function:\n"
+"  W.add_mem  :  u ∈ W → v ∈ W → u + v ∈ W\n"
+"Apply it to hu and hv to produce a proof that u + v ∈ W."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "`MySubspace.smul_mem`: Every subspace is closed under scalar multiplication.\n"
+"If `v ∈ W` and `α ∈ F` then `α • v ∈ W`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Congratulations! You have proved zero_add — the left-hand additive identity.\n"
+"You derived it from the right-hand identity and commutativity, with no extra axiom needed.\n"
+"The theorem zero_add is now unlocked and available in all future levels."
 msgstr ""
 
 #: Game.Levels.DemoWorld
 msgid "Demo World"
 msgstr ""
 
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "You have proved both identity theorems. Now combine them.\n"
+"\n"
+"Your goal is:   x * (0 + y) = (y + 0) * x\n"
+"\n"
+"Both sides equal x * y, which you can see by applying commutativity of addition\n"
+"and commutativity of multiplication. In Lean, each step must be explicit.\n"
+"\n"
+"\n"
+"Always supply explicit arguments to rw when there are multiple subterms that\n"
+"could match, so Lean rewrites exactly the one you intend."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Exploring the identity and commutativity"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L06_SubSpaces
+msgid "Intersection of two subspaces ii"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplying 1 on the right leaves an element unchanged:\n"
+"`a * 1 = a`."
+msgstr ""
+
+#: Game
+msgid "Created by Charlie Yates as part of dissertation MTHA7029Y\n"
+"at the University of East Anglia.\n"
+"The mathematics covers fields (Definition 1.1), vector spaces (Definition 1.5),\n"
+"and subspaces (Definition 1.7, Theorem 1.9)."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "Great work! You have combined two commutativity axioms in a single proof.\n"
+"Level 4 is the most challenging in this world.\n"
+"It introduces three new tactics: rcases, refine, and the backward rewrite ←."
+msgstr ""
+
 #: GameServer.RpcHandlers
 msgid "level completed with warnings… 🎭"
 msgstr ""
 
-#: Game.Levels.SubSpaces.L03_SubSpaces
-msgid "well done, I hope at this point you are getting to grips with the style of LEAN we will be using. You are doing very well!"
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Every element of a field has an additive inverse:\n"
+"`∀ a : F, ∃ b : F, a + b = 0 ∧ b + a = 0`."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that multiplying on the right side is the same as the left side:\n"
-"`a * b = b * a`."
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "Well done! You have proved add_perm4.\n"
+"This theorem is now unlocked and will be used directly in Level 3.\n"
+"The key lesson: even simple reorderings require careful bracket management in Lean.\n"
+"Level 2 introduces the other main axiom — distributivity of scalar multiplication."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "`MySubspace.zero_mem`: Every subspace of a vector space contains the zero vector.\n"
+"If `W` is a subspace of `V` then `0 ∈ W`."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "Congratulations! You have shown every subspace contains the zero vector.\n"
+"Remember: a subset without 0 cannot be a subspace.\n"
+"The exact tactic closes any goal when you can supply a proof term of exactly the right type.\n"
+"You will use exact in every remaining level of this world."
 msgstr ""
 
 #: Game
-msgid "Hello World Game"
+msgid "A Lean 4 game teaching fields, vector spaces and subspaces from the UEA second-year linear algebra module."
 msgstr ""
 
-#: Game.Levels.VectorSpaces.L02_VectorSpaces
-msgid "Theorem stating that scalar multiplication distributes over the sum of four vectors:\n"
-"`α • (v₁ + v₂ + v₃ + v₄) = α•v₁ + α•v₂ + α•v₃ + α•v₄`."
-msgstr ""
-
-#: Game
-msgid "You should use this game as a template for your own game and add your own levels."
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Addition in a field is associative:\n"
+"`(a + b) + c = a + (b + c)`."
 msgstr ""
 
 #: Game.Levels.SubSpaces.L02_SubSpaces
-msgid "Use one of our subspace axioms on hu and hv, hu and hv are simply asumptions we propose"
+msgid "Well done! This was your first proof using named hypotheses.\n"
+"In Lean, hu : u ∈ W means hu is a proof that u belongs to W.\n"
+"You supply it as an argument to W.add_mem, just as in a standard mathematical proof."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that multiplyig 1 on the left leaves an element unchanged:\n"
-"`1 * a = a`."
+#: Game.Levels.DemoWorld.L03_HelloWorld
+msgid "Combining multiplication and addition"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "`MyVectorSpace.smul_add`: Scalar multiplication distributes over vector addition: `α • (v + w) = α • v + α • w`."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "Similarly to the last level, we show a subspace is closed under scalar multiplication.\n"
+"\n"
+"If v ∈ W and α ∈ F, then α • v ∈ W.\n"
+"\n"
+"You are given: hv : v ∈ W\n"
+"\n"
+"The subspace axiom smul_mem has the form:\n"
+"  W.smul_mem : v ∈ W → α • v ∈ W\n"
+"\n"
+"Apply it to hv. Lean infers the scalar α from context automatically."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Start with: rcases MyField.add_inv a with ⟨ainv, ha_right, ha_left⟩"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "The `rw` tactic rewrites the goal using a given theorem or hypothesis."
 msgstr ""
 
 #: Game.Levels.DemoWorld.L01_HelloWorld
@@ -150,79 +269,416 @@ msgid "Theorem stating that adding zero on the right leaves an element unchanged
 "`a + 0 = a`."
 msgstr ""
 
-#: Game
-msgid "Here you can put additional information about the game.\n"
-"Use **markdown**."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L03_HelloWorld
-msgid "combing multiplication and addition"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Theorem stating that multiplyig 1 on the right leaves an element unchanged:\n"
-"`a * 1 = a`."
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Solution of a + x = b"
 msgstr ""
 
 #: Game.Levels.SubSpaces.L02_SubSpaces
 msgid "Closed under adition"
 msgstr ""
 
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Well done! You have proved one_mul — the left-hand multiplicative identity.\n"
+"You now have both identity theorems available.\n"
+"Level 3 combines commutativity of addition and multiplication in a single proof."
+msgstr ""
+
 #: Game.Levels.VectorSpaces
 msgid "Vector Spaces"
 msgstr ""
 
-#: Game.Levels.SubSpaces.L04_SubSpaces
-msgid "This level may take some thinking, but you can apply our axioms in a chain i.e our add axiom on our scalar mult axiom"
+#: Game.Levels.VectorSpaces.L03_VectorSpaces
+msgid "A two-line proof of a non-trivial statement!\n"
+"Once theorems are proved in Lean, using them is as simple as citing a lemma in maths.\n"
+"Level 4 is the hardest in this world — it proves Theorem 1.6(i) from the course notes."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L02_HelloWorld
-msgid "Exploring multiplicative inverse and commutatvity"
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "The `rcases` tactic destructs hypotheses, for example existential statements into their components."
 msgstr ""
 
-#: Game.Levels.SubSpaces.L01_SubSpaces
-msgid "We are going to begin by looking at the properties of a subspace. Suppose that V is a vector space over a field F and that W is a subset\n"
-"of V . We say that W is a (vector) subspace of V if it is a vector space in its own\n"
-"right with respect to vector addition and scalar multiplication inherited from V. Thus we will begin by looking at the importance of containing the zero vector."
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Congratulations, that was a tricky one! You have now proved the first part of our\n"
+"proposition. The method you learned will be used in later levels!"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "We are going to begin by looking at the usage of two of our exams to expand them\n"
-"! The two axioms are add_zero: `∀ a :  F, a + 0 = a` and add_comm : ∀ a b :  F , a + b = b + a.\n"
-"Using these two axioms we want to expand upon add_zero to be in a more complete. What i mean by this\n"
-"is that ater this level we will not only be able to say that a + 0 = a, but that 0+a =a."
+#: Game.Levels.VectorSpaces.L04_VectorSpaces
+msgid "After intro h and rcases, rewrite u as u + 0 using ← add_zero,"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L06_SubSpaces
+msgid "In Level 5 we showed U ∩ W contains 0 and is non-empty.\n"
+"Now we verify closure under the Subspace Test condition for both subspaces.\n"
+"\n"
+"Your goal is:  u + α • v ∈ W  ∧  u' + α • v' ∈ U\n"
+"\n"
+"You have four hypotheses:\n"
+"  hu  : u  ∈ W      hv  : v  ∈ W\n"
+"  hu' : u' ∈ U      hv' : v' ∈ U\n"
+"\n"
+"Each part has exactly the same structure as Level 4.\n"
+"Use constructor to split, then apply the subspace axioms for W and U in turn."
 msgstr ""
 
 #: Game.Levels.SubSpaces.L04_SubSpaces
 msgid "Subspace test"
 msgstr ""
 
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "The `constructor` tactic splits a conjunction goal `P ∧ Q`\n"
+"into two separate subgoals. Prove them in order: first P, then Q."
+msgstr ""
+
 #: Game
-msgid "Game Template"
+#: Game
+msgid "Linear Algebra LEAN Game"
+msgstr ""
+
+#: Game.Levels.SubSpaces
+msgid "Sub Spaces"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "We are going to begin by looking at the properties of a subspace.\n"
+"\n"
+"Suppose V is a vector space over a field F and W is a subset of V.\n"
+"W is a subspace of V if it is a vector space in its own right, inheriting\n"
+"vector addition and scalar multiplication from V.\n"
+"\n"
+"Our Lean definition of a subspace has three fields:\n"
+"  zero_mem : 0 ∈ W\n"
+"  add_mem  : u ∈ W → v ∈ W → u + v ∈ W\n"
+"  smul_mem : v ∈ W → α • v ∈ W\n"
+"\n"
+"These correspond exactly to the three conditions of the Subspace Test\n"
+"(Theorem 1.9 in the course notes).\n"
+"\n"
+"In this level we verify the first condition: the subspace W must contain 0.\n"
+"\n"
+"New tactic: exact\n"
+"  exact term  closes a goal when term has exactly the right type.\n"
+"  Here, W.zero_mem has type 0 ∈ W, which matches the goal directly."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "The `exact` tactic closes a goal by providing a direct proof term\n"
+"whose type matches the goal exactly. For example: `exact W.zero_mem`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplying 1 on the left leaves an element unchanged:\n"
+"`1 * a = a`."
+msgstr ""
+
+#: GameServer.RpcHandlers
+msgid "level completed! 🎉"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "Theorem stating that adding zero on the left leaves an element unchanged:\n"
+"`0 + a = a`."
+msgstr ""
+
+#: Game.Levels.DemoWorld
+msgid "Welcome to Field World!\n"
+"\n"
+"Before we can study vector spaces, we need to understand the algebraic structure that\n"
+"underpins all of linear algebra: a field.\n"
+"\n"
+"A field F = (F, +, ·, 0, 1) is a set together with two binary operations — addition\n"
+"and multiplication — satisfying eleven axioms. Informally, a field is any set on which\n"
+"we can add, subtract, multiply and divide in a sensible way. The real numbers ℝ, the\n"
+"rationals ℚ, the complex numbers ℂ, and the finite fields ℤ/pℤ (for any prime p) are\n"
+"all familiar examples.\n"
+"\n"
+"The axioms split into three groups. For addition (A1–A5): closure, additive identity 0,\n"
+"additive inverses, associativity, commutativity. For multiplication (M1–M5): closure,\n"
+"multiplicative identity 1, multiplicative inverses for non-zero elements, associativity,\n"
+"commutativity. And the distributive law D1 linking the two operations.\n"
+"\n"
+"Our Lean definition captures all of these as the typeclass MyField. You do not need to\n"
+"memorise every axiom at once — the levels in this world will introduce them one by one.\n"
+"The only tactic you need to begin with is rw (rewrite). When you write rw [thm], Lean\n"
+"finds the left-hand side of thm in the current goal and replaces it with the right-hand\n"
+"side. You will quickly see how powerful this is.\n"
+"\n"
+"The four levels are:\n"
+"  Level 1 — Proving 0 + x = x   (left-hand additive identity, derived from axiom A2)\n"
+"  Level 2 — Proving 1 * x = x   (left-hand multiplicative identity, from axiom M2)\n"
+"  Level 3 — Combining addition and multiplication commutativity\n"
+"  Level 4 — Showing the equation a + x = b always has a solution (Proposition 1.3)"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "`MyVectorSpace.add_inv`: Every vector has an additive inverse: `∀ v, ∃ w, v + w = 0 ∧ w + v = 0`."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L05_SubSpaces
+msgid "Use constructor to split the goal, then close each part with the appropriate zero_mem."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "Then use ← add_asoc to regroup, ha_right to cancel, and zero_add to finish."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L01_HelloWorld
+msgid "We are going to begin by looking at two of our axioms.\n"
+"The axiom add_zero states:   ∀ a : F, a + 0 = a\n"
+"The axiom add_comm states:   ∀ a b : F, a + b = b + a\n"
+"\n"
+"Our field definition only gives the right-hand additive identity (a + 0 = a),\n"
+"but Axiom A2 in the course notes requires both sides: 0 + a = a = a + 0.\n"
+"In this level we derive the left-hand version 0 + x = x from these two axioms.\n"
+"\n"
+"The only tactic you need is rw (rewrite).\n"
+"rw [thm] finds the left-hand side of thm in the goal and replaces it with the right-hand side.\n"
+"\n"
+"Step 1: rw [add_comm 0 x]   — rewrites 0 + x  to  x + 0.\n"
+"Step 2: rw [MyField.add_zero]   — rewrites x + 0  to  x, closing the goal."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "For the first part, apply our axioms in a chain: add_mem on top of smul_mem."
+msgstr ""
+
+#: Game.Levels.SubSpaces
+msgid "Welcome to Subspaces World!\n"
+"\n"
+"You have now mastered both fields and vector spaces. In this world we turn to subspaces —\n"
+"special subsets of a vector space that are vector spaces in their own right.\n"
+"\n"
+"Recall Definition 1.7 from the course notes: suppose V is a vector space over a field F\n"
+"and W is a subset of V. We say that W is a (vector) subspace of V if it is a vector space\n"
+"in its own right with respect to the vector addition and scalar multiplication inherited\n"
+"from V.\n"
+"\n"
+"Checking all ten vector space axioms for a subset would be very tedious. Thankfully,\n"
+"Lemma 1.8 tells us that any subset automatically inherits VS4, VS5, VS7, VS8, VS9 and\n"
+"VS10 from V. So we only need to check four things. In fact, the Subspace Test\n"
+"(Theorem 1.9) reduces this further to just three conditions:\n"
+"\n"
+"  (i)   W ≠ ∅, equivalently 0 ∈ W\n"
+"  (ii)  u, v ∈ W ⟹ u + v ∈ W          (closed under addition)\n"
+"  (iii) v ∈ W, λ ∈ F ⟹ λv ∈ W         (closed under scalar multiplication)\n"
+"\n"
+"Our Lean definition encodes exactly these three conditions as fields of the MySubspace\n"
+"structure:\n"
+"  zero_mem : 0 ∈ carrier\n"
+"  add_mem  : u ∈ W → v ∈ W → u + v ∈ W\n"
+"  smul_mem : v ∈ W → α • v ∈ W\n"
+"\n"
+"The proofs in this world are generally short — the mathematical content comes from\n"
+"understanding why each condition matters, not from long tactic sequences. The two tactics\n"
+"you will use throughout are exact (to close a goal with a matching proof term) and\n"
+"constructor (to split a conjunction P ∧ Q into two subgoals).\n"
+"\n"
+"The six levels are:\n"
+"  Level 1 — Every subspace contains 0                     (zero_mem)\n"
+"  Level 2 — Closed under addition                         (add_mem)\n"
+"  Level 3 — Closed under scalar multiplication            (smul_mem)\n"
+"  Level 4 — The full Subspace Test: u + α • v ∈ W        (Theorem 1.9)\n"
+"  Level 5 — Intersection of subspaces, part I: 0 ∈ U ∩ W\n"
+"  Level 6 — Intersection of subspaces, part II: closure   (Proposition 1.11(i))"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L03_VectorSpaces
+msgid "Combining permutation and scalar distribution"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "We now prove the first part of Proposition 1.3 from the course notes:\n"
+"if a, b ∈ F then ∃ x : F, a + x = b.\n"
+"\n"
+"The proof exhibits x = ainv + b, where ainv is the additive inverse of a.\n"
+"Check: a + (ainv + b) = (a + ainv) + b = 0 + b = b.\n"
+"\n"
+"Three new tactics are used here.\n"
+"\n"
+"rcases — The tactic rcases is used to break down statements with connectives into components.\n"
+"  rcases MyField.add_inv a with ⟨ainv, ha_right, ha_left⟩\n"
+"  gives you:  ainv : F,  ha_right : a + ainv = 0,  ha_left : ainv + a = 0\n"
+"\n"
+"refine — The tactic refine works in the same way that “suppose” works in a normal proof: we assume something holds in order to continue proving our statement.\n"
+"  refine ⟨ainv + b, ?_⟩\n"
+"  changes the goal to: a + (ainv + b) = b\n"
+"\n"
+"← (backward rewrite) — applies a theorem right-to-left.\n"
+"  rw [← MyField.add_asoc a ainv b]\n"
+"  turns a + (ainv + b) into (a + ainv) + b"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L02_VectorSpaces
+msgid "Excellent! You have proved smul_add4.\n"
+"In Level 3 you will see how having smul_add4 as a named theorem makes the next proof\n"
+"just two lines — this is the payoff of building up a library of lemmas.\n"
+"Theorem smul_add4 is now unlocked."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Theorem stating that multiplication is commutative:\n"
+"`a * b = b * a`."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "Excellent! You have verified the Subspace Test in Lean.\n"
+"The key technique: chaining theorem applications.\n"
+"  W.add_mem hu (W.smul_mem hv)\n"
+"passes the output of smul_mem directly as the second argument of add_mem.\n"
+"constructor will appear again in Levels 5 and 6."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L02_VectorSpaces
+msgid "Scalar multiplication distributes over a sum of four vectors:\n"
+"`α • (v₁ + v₂ + v₃ + v₄) = α•v₁ + α•v₂ + α•v₃ + α•v₄`."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "`MyVectorSpace.add_asoc`: Vector addition is associative: `(u + v) + w = u + (v + w)`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "Exploring multiplicative inverse and commutativity"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L03_SubSpaces
+msgid "Closed under scalar multiplication"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L02_VectorSpaces
+msgid "Now we use smul_add to distribute scalar multiplication over four vectors.\n"
+"\n"
+"The axiom smul_add handles two vectors at a time:\n"
+"  smul_add : α • (v + w) = α • v + α • w\n"
+"\n"
+"To distribute over four vectors we must apply it in stages, using add_asoc to\n"
+"restructure the brackets first. The strategy has five steps:\n"
+"Now we will use our smul_add axiom to distribute scalar multiplication over a sum of four vectors."
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L04_VectorSpaces
+msgid "In this level we prove Theorem 1.6(i) from the course notes:\n"
+"if u + v = v then u = 0.\n"
+"\n"
+"The proof follows this chain (where w satisfies v + w = 0):\n"
+"  u = u + 0 = u + (v + w) = (u + v) + w = v + w = 0\n"
+"\n"
+"In Lean we build this chain with backward rewrites.\n"
+"A new tactic appears: intro h\n"
+"  When the goal is P → Q, intro h brings P into context as hypothesis h."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L05_SubSpaces
+msgid "Intersection of two subspaces i"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L01_SubSpaces
+msgid "W.zero_mem has type 0 ∈ W, which matches the goal exactly.\n"
+"Try: exact W.zero_mem"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "In this level we explore commutativity and associativity of vector addition.\n"
+"\n"
+"Recall Remark 2 after Definition 1.5: using VS4 and VS5 we can reorder any sum.\n"
+"Here we prove:  v_1 + v_2 + v_3 + v_4 = v_2 + v_1 + v_4 + v_3\n"
+"\n"
+"IMPORTANT: when Lean writes v_1 + v_2 + v_3 + v_4 it means ((v_1 + v_2) + v_3) + v_4.\n"
+"The brackets are invisible but matter when applying rw.\n"
+"Hover over a + symbol in the interface to reveal the hidden bracket structure."
+msgstr ""
+
+#: Game.Levels.VectorSpaces
+msgid "Welcome to Vector Spaces World!\n"
+"\n"
+"You have completed Field World and have a solid grasp of the field axioms. We now build\n"
+"the central object of this module: a vector space.\n"
+"\n"
+"Let F be a field. A vector space V over F is a set of elements called vectors, equipped\n"
+"with two operations:\n"
+"  Vector addition:       + : V × V → V\n"
+"  Scalar multiplication: · : F × V → V\n"
+"satisfying ten axioms VS1–VS10 (Definition 1.5 of the course notes).\n"
+"\n"
+"The axioms VS1–VS5 govern vector addition — they say that (V, +) is an abelian group,\n"
+"mirroring the additive structure of a field. The axioms VS6–VS10 govern scalar\n"
+"multiplication — they describe how scalars from F scale vectors in V. Familiar examples\n"
+"include ℝⁿ for any n, the space of m × n matrices, and spaces of functions.\n"
+"\n"
+"Our Lean definition is the typeclass MyVectorSpace F V. Scalars are elements of F and\n"
+"vectors are elements of V; scalar multiplication is written α • v (the bullet symbol).\n"
+"\n"
+"One important thing to know before you start: when Lean writes v₁ + v₂ + v₃ + v₄ it\n"
+"means ((v₁ + v₂) + v₃) + v₄. The brackets are invisible but they are always there, and\n"
+"they matter when applying the rw tactic. If a rewrite does not work, hover over a +\n"
+"symbol in the interface to reveal the hidden bracket structure.\n"
+"\n"
+"The four levels are:\n"
+"  Level 1 — Permuting four vectors: v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃\n"
+"  Level 2 — Distributing a scalar: α • (v₁ + v₂ + v₃ + v₄) = α•v₁ + α•v₂ + α•v₃ + α•v₄\n"
+"  Level 3 — Combining permutation and scalar distribution in two lines\n"
+"  Level 4 — Proving the cancellation law: u + v = v → u = 0  (Theorem 1.6(i))"
+msgstr ""
+
+#: Game.Levels.DemoWorld.L04_HelloWorld
+msgid "The `refine` tactic works like `exact` but allows leaving holes marked with `?_`."
+msgstr ""
+
+#: Game.Levels.DemoWorld.L02_HelloWorld
+msgid "In Level 1 you used commutativity of addition to derive the left-hand additive identity.\n"
+"Now do exactly the same for multiplication.\n"
+"\n"
+"The axiom mul_one states:    ∀ a : F, a * 1 = a\n"
+"The axiom mul_comm states:   ∀ a b : F, a * b = b * a\n"
+"\n"
+"Your goal is to prove 1 * x = x.\n"
+"The proof has exactly the same two-step structure as Level 1\n"
+"\n"
+"Notice: the additive and multiplicative structures of a field are both abelian groups,\n"
+"so the same proof pattern works for both."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L06_SubSpaces
+msgid "Congratulations — you have completed Subspaces World and the entire LEAN game!\n"
+"\n"
+"Levels 5 and 6 together constitute a complete Lean proof of Proposition 1.11(i):\n"
+"the intersection of two subspaces is a subspace.\n"
+"\n"
+"Across all three worlds you have formally verified:\n"
+"  Definition 1.1  (field axioms)\n"
+"  Proposition 1.3 (a + x = b has a solution)\n"
+"  Definition 1.5  (vector space axioms)\n"
+"  Theorem 1.6(i)  (cancellation law)\n"
+"  Definition 1.7  (subspaces)\n"
+"  Theorem 1.9     (Subspace Test)\n"
+"  Proposition 1.11(i) (intersection of subspaces)\n"
+"\n"
+"Well done!"
+msgstr ""
+
+#: Game.Levels.SubSpaces.L04_SubSpaces
+msgid "We now look at the Subspace Test (Theorem 1.9 of the course notes).\n"
+"\n"
+"Your goal is a conjunction:  (u + α • v ∈ W) ∧ (0 ∈ W)\n"
+"\n"
+"New tactic: constructor\n"
+"  When the goal is P ∧ Q, constructor splits it into two separate subgoals.\n"
+"  Prove them in order: first P, then Q."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L05_SubSpaces
+msgid "Great! You have shown that 0 ∈ U ∩ W — the intersection is non-empty.\n"
+"This is the first step in proving U ∩ W is a subspace.\n"
+"Level 6 completes the proof by verifying closure under the Subspace Test condition."
+msgstr ""
+
+#: Game.Levels.SubSpaces.L02_SubSpaces
+msgid "hu and hv are assumptions given to you. Try: exact W.add_mem hu hv"
+msgstr ""
+
+#: Game.Levels.VectorSpaces.L01_VectorSpaces
+msgid "Start with rw [MyVectorSpace.add_comm v_1 v_2], then use add_asoc to separate v_3 and v_4."
 msgstr ""
 
 #: Game.Levels.SubSpaces.L01_SubSpaces
 msgid "Exploring Subspaces"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Congratulations! You have completed your first level\n"
-"and can now use the theorem zero_add, you shall see it in theorems on the\n"
-"next level."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L03_HelloWorld
-msgid "We are now going to look at combining what we have used so far to prove a slightly more\n"
-"complex statement\n"
-"-/\n"
-"/-\n"
-"We will be looking at combining the fact that\n"
-"` ∀ a b : F, a * b = b * a`\n"
-"and\n"
-"` ∀ a :  F, a + 0 = a`\n"
-"To prove our statement"
-msgstr ""
-
-#: Game.levels.SubSpaces
-msgid "Sub Spaces"
 msgstr ""

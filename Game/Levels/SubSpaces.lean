@@ -9,7 +9,6 @@ World "SubSpaces"
 Title "Sub Spaces"
 Prerequisites "VectorSpaces"
 
-
 Introduction "
 Welcome to Subspaces World!
 
