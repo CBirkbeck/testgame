@@ -3,4 +3,3 @@ import Game.Levels.LinearCombinations.L02_LinearCombinations
 
 World "LinearCombinations"
 Title "Linear combinations"
-Prerequisites "VectorSpaces"
