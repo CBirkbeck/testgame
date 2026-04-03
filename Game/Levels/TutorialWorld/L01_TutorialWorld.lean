@@ -9,8 +9,8 @@ Title "Your First Rewrite"
 Introduction "Welcome to the Tutorial World!
 
 This world will teach you the three fundamental tactics you need to play this game:
-  rw        — rewrite a goal using an equation
-  exact     — close a goal with a direct proof term
+  rw          — rewrite a goal using an equation
+  exact       — close a goal with a direct proof term
   constructor — split a conjunction goal into two parts
 
 We start with the simplest tactic: rw (rewrite).
@@ -22,17 +22,19 @@ In Lean, if your goal contains the expression a + 0, you can replace it with a b
   rw [MyField.add_zero]
 
 Lean finds the left-hand side (a + 0) in your goal and replaces it with the right-hand side (a).
+After the substitution the goal becomes  a = a, which Lean closes automatically.
 
 Your goal in this level is:
   a + 0 = a
 
 One rewrite is all you need."
 
-TacticDoc rw "The `rw` tactic rewrites the goal using an equation.
+/-- The `rw` tactic rewrites the goal using a given theorem or hypothesis.
 Writing `rw [h]` finds the left-hand side of `h` in the current goal and
 replaces it with the right-hand side.
 After the rewrite, if the goal becomes `x = x`, Lean closes it automatically.
-Example: if the goal is `a + 0 = a`, then `rw [MyField.add_zero]` solves it."
+Example: if the goal is `a + 0 = a`, then `rw [MyField.add_zero]` solves it. -/
+TacticDoc rw
 
 NewTactic rw
 
