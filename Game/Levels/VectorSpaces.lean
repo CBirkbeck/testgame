@@ -5,7 +5,7 @@ import Game.Levels.VectorSpaces.L04_VectorSpaces
 
 World "VectorSpaces"
 Title "Vector Spaces"
-Prerequisites "DemoWorld"
+
 
 Introduction "
 Welcome to Vector Spaces World!
