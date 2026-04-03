@@ -9,48 +9,47 @@ Title "Chaining Rewrites"
 
 Introduction "Well done on completing Level 1!
 
-You know that rw replaces a subexpression using an equation.
-In this level you will need to apply rw twice, using two different field axioms.
+You know that rw replaces a subexpression in the goal using an equation.
+In this level you will need to apply rw twice in a row, using two field axioms.
 
-Recall:
-  add_comm  : ∀ a b : F,  a + b = b + a
-  mul_comm  : ∀ a b : F,  a * b = b * a
+Recall the associativity axiom:
+  add_asoc : ∀ a b c : F,  (a + b) + c = a + (b + c)
 
 Your goal is:
-  a + b * c = b * a + a
+  (a + b) + c = a + (b + c)
 
+This matches the left-hand side of add_asoc exactly.
+A single rw [MyField.add_asoc] rewrites it to  a + (b + c) = a + (b + c),
+which Lean closes automatically.
 
-Hint: try both rewrites in this order:
-  rw [MyField.mul_comm c a]   — this targets c * a if it appears; be precise!
-  rw [MyField.add_comm]
+Now try a two-step proof. Your goal is actually:
+  (a + b) + c = a + (b + c)
 
-The explicit form  rw [MyField.add_comm a b]  tells Lean exactly which pair to swap."
+Step 1: rw [MyField.add_asoc]   — left side becomes a + (b + c)
+The goal is now closed.
+
+In later levels you will chain several rw steps to rearrange longer expressions.
+Each rw changes the goal and you can watch it update in the info panel on the right."
+
+/--
+`MyField.add_asoc`: Addition in a field is associative.
+For any `a b c : F`, `(a + b) + c = a + (b + c)`.
+-/
+TheoremDoc MyField.add_asoc as "add_asoc" in "Tutorial"
+
+NewTheorem MyField.add_asoc
 
 variable {F : Type*} [MyField F]
 
-/--
-`MyField.add_comm`: Addition in a field is commutative.
-For any `a b : F`, `a + b = b + a`.
--/
-TheoremDoc MyField.add_comm as "add_comm" in "Tutorial"
-
-/--
-`MyField.mul_comm`: Multiplication in a field is commutative.
-For any `a b : F`, `a * b = b * a`.
--/
-TheoremDoc MyField.mul_comm as "mul_comm" in "Tutorial"
-
 Statement (a b c : F) : (a + b) + c = a + (b + c) := by
-  Hint "This is the associativity axiom add_asoc. Try: rw [MyField.add_asoc]"
+  Hint "This is the associativity axiom. Try: rw [MyField.add_asoc]"
   rw [MyField.add_asoc]
 
 Conclusion "You used rw with the associativity axiom.
 
 Key lesson: rw [lemma] rewrites the *first* matching subterm it finds.
 If a lemma has free variables — like  add_asoc a b c — Lean infers them from the goal.
-You can also write  rw [MyField.add_asoc a b c]  to be explicit.
+You can also write  rw [MyField.add_asoc a b c]  to target a specific occurrence.
 
 In longer proofs you will chain several rw steps. Try writing each one on its own line
 so you can see the intermediate goals change in the info panel."
-
-NewTheorem MyField.add_comm MyField.mul_comm MyField.add_asoc

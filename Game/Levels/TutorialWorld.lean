@@ -26,7 +26,7 @@ a worked example and a hint to get you started.
 
 The four levels are:
   Level 1 — rw: rewriting with add_zero
-  Level 2 — rw: chaining rewrites with add_asoc
+  Level 2 — rw: rewriting with add_asoc
   Level 3 — exact: closing a goal from a hypothesis
   Level 4 — constructor: splitting a conjunction and combining all three tactics
 

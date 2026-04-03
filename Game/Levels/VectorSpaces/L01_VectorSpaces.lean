@@ -1,65 +1,67 @@
 import Game.Metadata
 import Game.Levels.Definitions
 
-World "VectorSpaces"
+World "TutorialWorld"
 Level 1
 
-Title "Permuting four vectors"
+Title "Your First Rewrite"
 
-Introduction "In this level we explore commutativity and associativity of vector addition.
+Introduction "Welcome to the Tutorial World!
 
-Recall Remark 2 after Definition 1.5: using VS4 and VS5 we can reorder any sum.
-Here we prove:  v_1 + v_2 + v_3 + v_4 = v_2 + v_1 + v_4 + v_3
+This world will teach you the three fundamental tactics you need to play this game:
+  rw          — rewrite a goal using an equation
+  exact       — close a goal with a direct proof term
+  constructor — split a conjunction goal into two parts
 
-IMPORTANT: when Lean writes v_1 + v_2 + v_3 + v_4 it means ((v_1 + v_2) + v_3) + v_4.
-The brackets are invisible but matter when applying rw.
-Hover over a + symbol in the interface to reveal the hidden bracket structure."
+We start with the simplest tactic: rw (rewrite).
 
+Recall that a field F satisfies the axiom:
+  add_zero : ∀ a : F,  a + 0 = a
 
-variable {F V : Type*} [MyField F] [MyVectorSpace F V]
+In Lean, if your goal contains the expression a + 0, you can replace it with a by writing:
+  rw [MyField.add_zero]
 
-/--
-`MyVectorSpace.add_zero`: Vector addition has a right identity: `v + 0 = v`.
--/
-TheoremDoc MyVectorSpace.add_zero as "V.add_zero" in "VectorSpace"
+Lean finds the left-hand side (a + 0) in your goal and replaces it with the right-hand side (a).
+After the substitution the goal becomes  a = a, which Lean closes automatically.
 
-/--
-`MyVectorSpace.add_comm`: Vector addition is commutative: `u + v = v + u`.
--/
-TheoremDoc MyVectorSpace.add_comm as "V.add_comm" in "VectorSpace"
+Your goal in this level is:
+  a + 0 = a
 
-/--
-`MyVectorSpace.add_inv`: Every vector has an additive inverse: `∀ v, ∃ w, v + w = 0 ∧ w + v = 0`.
--/
-TheoremDoc MyVectorSpace.add_inv as "V.add_inv" in "VectorSpace"
+One rewrite is all you need."
 
-/--
-`MyVectorSpace.add_asoc`: Vector addition is associative: `(u + v) + w = u + (v + w)`.
--/
-TheoremDoc MyVectorSpace.add_asoc as "V.add_asoc" in "VectorSpace"
+/-- The `rw` tactic rewrites the goal using a given theorem or hypothesis.
+Writing `rw [h]` finds the left-hand side of `h` in the current goal and
+replaces it with the right-hand side.
+After the rewrite, if the goal becomes `x = x`, Lean closes it automatically.
+Example: if the goal is `a + 0 = a`, then `rw [MyField.add_zero]` solves it. -/
+TacticDoc rw
 
-/--
-`MyVectorSpace.smul_add`: Scalar multiplication distributes over vector addition: `α • (v + w) = α • v + α • w`.
--/
-TheoremDoc MyVectorSpace.smul_add as "V.smul_add" in "VectorSpace"
+NewTactic rw
+
+variable {F : Type*} [MyField F]
 
 /--
-`MyVectorSpace.add_perm4`: Vectors can be permuted in a sum of four: `v₁ + v₂ + v₃ + v₄ = v₂ + v₁ + v₄ + v₃`.
+`MyField.add_zero`: The right-hand additive identity axiom.
+For any element `a` in a field, `a + 0 = a`.
 -/
-TheoremDoc MyVectorSpace.add_perm4 as "V.add_perm4" in "VectorSpace"
+TheoremDoc MyField.add_zero as "add_zero" in "Tutorial"
 
+Statement (a : F) : a + 0 = a := by
+  Hint "Try: rw [MyField.add_zero]
+After the rewrite the goal becomes a = a, which Lean closes automatically."
+  rw [MyField.add_zero]
 
-Statement MyVectorSpace.add_perm4 (v_1 v_2 v_3 v_4 : V) :
-    v_1 + v_2 + v_3 + v_4 = v_2 + v_1 + v_4 + v_3 := by
-  Hint "Start with rw [MyVectorSpace.add_comm v_1 v_2], then use add_asoc to separate v_3 and v_4."
-  rw [MyVectorSpace.add_comm v_1 v_2]
-  rw [MyVectorSpace.add_asoc (v_2 + v_1) v_3 v_4]
-  rw [MyVectorSpace.add_comm v_3 v_4]
-  rw [← MyVectorSpace.add_asoc (v_2 + v_1) v_4 v_3]
+Conclusion "Excellent! You used rw for the first time.
 
-Conclusion "Well done! You have proved add_perm4.
-This theorem is now unlocked and will be used directly in Level 3.
-The key lesson: even simple reorderings require careful bracket management in Lean.
-Level 2 introduces the other main axiom — distributivity of scalar multiplication."
+Here is what happened step by step:
+  1. The goal was  a + 0 = a
+  2. rw [MyField.add_zero] replaced  a + 0  with  a
+  3. The goal became  a = a, which Lean closes by reflexivity.
 
-NewTheorem MyVectorSpace.add_zero MyVectorSpace.add_comm MyVectorSpace.add_inv MyVectorSpace.add_asoc MyVectorSpace.smul_add MyVectorSpace.add_perm4
+The rw tactic is your most versatile tool. It can be used multiple times in a row:
+  rw [lemma1]
+  rw [lemma2]
+or chained together: rw [lemma1, lemma2].
+You will use it throughout Field World and Vector Spaces World."
+
+NewTheorem MyField.add_zero

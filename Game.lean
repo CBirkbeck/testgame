@@ -13,14 +13,13 @@ supervised by Christopher Birkbeck.
 There are five worlds to complete, each building on the last.
 Complete them in order — each world unlocks the next.
 
-  🎓 Tutorial World      — Learn the three core tactics: rw, exact, constructor
-  🔢 Field World         — Explore the axioms of a field (Definition 1.1)
-  📐 Vector Spaces World — Build intuition for vector space axioms (Definition 1.5)
-  🔗 Linear Combinations — Reason about linear combinations of vectors
-  🧩 Subspaces World     — Prove the Subspace Test (Theorem 1.9)
+  Tutorial World      — Learn the three core tactics: rw, exact, constructor
+  Field World         — Explore the axioms of a field (Definition 1.1)
+  Vector Spaces World — Build intuition for vector space axioms (Definition 1.5)
+  Linear Combinations — Reason about linear combinations of vectors
+  Subspaces World     — Prove the Subspace Test (Theorem 1.9)
 
-Start with Tutorial World if you are new to Lean. If you already know the basics,
-you may jump straight to Field World."
+Start with Tutorial World if you are new to Lean."
 
 Info "Created by Charlie Yates as part of dissertation MTHA7029Y
 at the University of East Anglia.
@@ -30,11 +29,5 @@ linear combinations, and subspaces (Definition 1.7, Theorem 1.9)."
 Languages "en"
 CaptionShort "Linear Algebra LEAN Game"
 CaptionLong "A Lean 4 game teaching fields, vector spaces, linear combinations and subspaces from the UEA second-year linear algebra module."
-
--- World ordering: Tutorial → Field → VectorSpaces → LinearCombinations → SubSpaces
-WorldUnlocks "TutorialWorld" "DemoWorld"
-WorldUnlocks "DemoWorld" "VectorSpaces"
-WorldUnlocks "VectorSpaces" "LinearCombinations"
-WorldUnlocks "LinearCombinations" "SubSpaces"
 
 MakeGame
