@@ -34,13 +34,13 @@ Conclusion "Congratulations — you have completed Subspaces World and the entir
 Levels 5 and 6 together constitute a complete Lean proof of Proposition 1.11(i):
 the intersection of two subspaces is a subspace.
 
-Across all three worlds you have formally verified:\n
-  Definition 1.1  (field axioms)\n
-  Proposition 1.3 (a + x = b has a solution)\n
-  Definition 1.5  (vector space axioms)\n
-  Theorem 1.6(i)  (cancellation law)\n
-  Definition 1.7  (subspaces)\n
-  Theorem 1.9     (Subspace Test)\n
-  Proposition 1.11(i) (intersection of subspaces)\n
+Across all three worlds you have formally verified:
+  Definition 1.1  (field axioms)
+  Proposition 1.3 (a + x = b has a solution)
+  Definition 1.5  (vector space axioms)
+  Theorem 1.6(i)  (cancellation law)
+  Definition 1.7  (subspaces)
+  Theorem 1.9     (Subspace Test)
+  Proposition 1.11(i) (intersection of subspaces)
 
 Well done!"

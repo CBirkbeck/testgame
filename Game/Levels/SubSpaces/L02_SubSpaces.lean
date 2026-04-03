@@ -1,6 +1,6 @@
 import Game.Metadata
 import Game.Levels.Definitions
-
+import Game.Levels.SubSpaces.L01_SubSpace
 World "SubSpaces"
 Level 2
 

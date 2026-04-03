@@ -27,10 +27,28 @@ New tactic: exact
   Here, W.zero_mem has type 0 ∈ W, which matches the goal.
 "
 
-TacticDoc exact "The `exact` tactic closes a goal by providing a direct proof term."
-TacticDoc constructor "The `constructor` tactic splits a conjunction goal `P ∧ Q` into two subgoals."
-
 NewTactic exact constructor
+
+variable {F V : Type*} [MyField F] [MyVectorSpace F V]
+variable (W : MySubspace F V)
+
+/--
+`MySubspace.zero_mem`: Every subspace of a vector space contains the zero vector.
+If `W` is a subspace of `V` then `0 ∈ W`.
+-/
+TheoremDoc MySubspace.zero_mem as "zero_mem" in "Subspaces"
+
+/--
+`MySubspace.add_mem`: Every subspace is closed under vector addition.
+If `u ∈ W` and `v ∈ W` then `u + v ∈ W`.
+-/
+TheoremDoc MySubspace.add_mem as "add_mem" in "Subspaces"
+
+/--
+`MySubspace.smul_mem`: Every subspace is closed under scalar multiplication.
+If `v ∈ W` and `α ∈ F` then `α • v ∈ W`.
+-/
+TheoremDoc MySubspace.smul_mem as "smul_mem" in "Subspaces"
 
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 variable (W : MySubspace F V)
