@@ -1,7 +1,7 @@
 import Game.Levels.DemoWorld
 import Game.Levels.VectorSpaces
 import Game.Levels.SubSpaces
-import Game.Levels.LinearCombinations
+
 
 Title "Hello World Game"
 Introduction "
