@@ -20,7 +20,7 @@ Both U and W are subspaces, so both contain 0."
 variable {F V : Type*} [MyField F] [MyVectorSpace F V]
 
 Statement (U : MySubspace F V) (W : MySubspace F V) : 0 ∈ U ∧ 0 ∈ W := by
-Hint "Use constructor to split the goal, then close each part with the appropriate zero_mem."
+  Hint "Use constructor to split the goal, then close each part with the appropriate zero_mem."
   constructor
   exact U.zero_mem
   exact W.zero_mem
