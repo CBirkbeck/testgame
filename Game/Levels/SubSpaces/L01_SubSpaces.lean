@@ -13,7 +13,7 @@ W is a subspace of V if it is a vector space in its own right, inheriting
 vector addition and scalar multiplication from V.
 
 Our Lean definition of a subspace has three fields:
-  zero_mem : 0 ∈ carrier
+  zero_mem : 0 ∈ W
   add_mem  : u ∈ W → v ∈ W → u + v ∈ W
   smul_mem : v ∈ W → α • v ∈ W
 
@@ -24,8 +24,13 @@ In this level we verify the first condition: the subspace W must contain 0.
 
 New tactic: exact
   exact term  closes a goal when term has exactly the right type.
-  Here, W.zero_mem has type 0 ∈ W, which matches the goal.
-"
+  Here, W.zero_mem has type 0 ∈ W, which matches the goal directly."
+
+TacticDoc exact "The `exact` tactic closes a goal by providing a direct proof term
+whose type matches the goal exactly. For example: `exact W.zero_mem`."
+
+TacticDoc constructor "The `constructor` tactic splits a conjunction goal `P ∧ Q`
+into two separate subgoals. Prove them in order: first P, then Q."
 
 NewTactic exact constructor
 
@@ -50,13 +55,14 @@ If `v ∈ W` and `α ∈ F` then `α • v ∈ W`.
 -/
 TheoremDoc MySubspace.smul_mem as "smul_mem" in "Subspaces"
 
-variable {F V : Type*} [MyField F] [MyVectorSpace F V]
-variable (W : MySubspace F V)
-
 Statement : 0 ∈ W := by
+  Hint "W.zero_mem has type 0 ∈ W, which matches the goal exactly.
+Try: exact W.zero_mem"
   exact W.zero_mem
 
 Conclusion "Congratulations! You have shown every subspace contains the zero vector.
 Remember: a subset without 0 cannot be a subspace.
 The exact tactic closes any goal when you can supply a proof term of exactly the right type.
 You will use exact in every remaining level of this world."
+
+NewTheorem MySubspace.zero_mem MySubspace.add_mem MySubspace.smul_mem
