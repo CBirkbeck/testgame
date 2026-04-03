@@ -7,7 +7,7 @@ import Game.Levels.SubSpaces.L06_SubSpaces
 
 World "SubSpaces"
 Title "Sub Spaces"
-Prerequisites "VectorSpaces"
+Prerequisites "VectorSpaces" "DemoWorld"
 
 Introduction "
 Welcome to Subspaces World!
